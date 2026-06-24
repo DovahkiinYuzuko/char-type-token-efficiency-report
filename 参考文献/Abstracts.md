@@ -1,24 +1,23 @@
 # 参考文献Abstract集
 
 ## 目次
-[目次](#目次)
-[参考文献](#参考文献)
-[Abstruct](#abstract)
+- [参考文献](#参考文献)
+- [Abstract](#abstract)
 
 ---
 ## 参考文献
-日付はyyyy/MM
+※各論文タイトルから公式の公開ページ、またはPDFアーカイブへ直接アクセスできます。
 
-- [Inconsistent Tokenizations Cause Language Models to be Perplexed by Japanese Grammar](./2025.acl-short.75.pdf)
+- [Inconsistent Tokenizations Cause Language Models to be Perplexed by Japanese Grammar](https://aclanthology.org/2025.acl-short.75/)
   - Andrew Gambardella, Takeshi Kojima, Yusuke Iwasawa, Yutaka Matsuo
   - 2025/07
-- [Improbable Bigrams Expose Vulnerabilities of Incomplete Tokens in Byte-Level Tokenizers](2025.emnlp-main.919.pdf)
+- [Improbable Bigrams Expose Vulnerabilities of Incomplete Tokens in Byte-Level Tokenizers](https://aclanthology.org/2025.emnlp-main.919/)
   - Eugene Jang, Kimin Lee, Jin-Woo Chung, Keuntae Park, Seungwon Shin
   - 2025/11
-- [How does a Language-Specific Tokenizer affect LLMs?](./2502.12560v2.pdf)
+- [How does a Language-Specific Tokenizer affect LLMs?](https://arxiv.org/abs/2502.12560)
   - Jean Seo, Jaeyoon Kim, SungJoo Byun, Hyopil Shin
   - 2025/02
-- [Chinese Language Is Not More Efficient Than English in Vibe Coding: A Preliminary Study on Token Cost and Problem-Solving Rate](./2604.14210v1.pdf)
+- [Chinese Language Is Not More Efficient Than English in Vibe Coding: A Preliminary Study on Token Cost and Problem-Solving Rate](https://arxiv.org/abs/2604.14210)
   - Simiao Ren, Xingyu Shen, Yuchen Zhou, Dennis (Tsang)Ng, Ankit Raj
   - 2026/04
 

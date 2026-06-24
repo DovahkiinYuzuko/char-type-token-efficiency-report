@@ -49,7 +49,6 @@
 .
 ├── .gitignore
 ├── LICENSE
-├── LLMトークン効率グラフ.pdf
 ├── main.py                 # 実行スクリプト
 ├── NOTICE.md
 ├── output.csv              # 検証結果のデータシート

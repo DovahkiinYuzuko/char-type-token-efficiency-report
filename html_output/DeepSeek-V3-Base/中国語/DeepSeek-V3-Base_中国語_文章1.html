@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>DeepSeek-V3-Base - 中国語 - 文章1</title>
+    <style>
+        :root {
+            --bg: #111111;
+            --panel: #1a1a1a;
+            --text: #eeeeee;
+            --muted: #b5b5b5;
+            --accent: #0ea5e9;
+            --border: #2a2a2a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .panel {
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .panel h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-box {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .text-area {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .token-container {
+            line-height: 2.2;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="capture-area">
+        <div class="header">
+            <div class="breadcrumb">Tokenizer Dashboard</div>
+            <h2>DeepSeek-V3-Base &gt; 中国語 &gt; 文章1</h2>
+        </div>
+        <div class="panel">
+            <h3> 統計情報</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">267</div>
+                    <div class="stat-label">文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">137</div>
+                    <div class="stat-label">トークン数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">1.949</div>
+                    <div class="stat-label">トークンあたり文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">51.31%</div>
+                    <div class="stat-label">トークン消費</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3> 原文</h3>
+            <div class="text-area">这是一段用于测量不同文字种类中语义信息压缩效率的测试文本。
+我们关注的是字符数和 token 数。字符数按原样计数，token 数使用 OpenAI 提供的 Tokenizer 进行测量。
+关于 token 数，可能会因模型不同而有所差异，但暂且以 GPT5.x 的 token 计数作为临时数据。
+日语部分由测试执行者本人输入，而英语、中文、韩语部分为 AI 翻译。翻译由乐天推出的 Rakuten AI 3.0 完成。
+这只是为了大致可视化语义信息的压缩率与 token 效率，请不要过分追求严格的严谨性。
+至此，测试用文本结束。</div>
+        </div>
+        <div class="panel">
+            <h3> トークン分割結果</h3>
+            <div class="token-container">
+                <span class="token" style="background-color: #1e40af;">这是一</span>
+<span class="token" style="background-color: #86198f;">段</span>
+<span class="token" style="background-color: #166534;">用于</span>
+<span class="token" style="background-color: #991b1b;">测量</span>
+<span class="token" style="background-color: #115e59;">不同</span>
+<span class="token" style="background-color: #3f3f46;">文字</span>
+<span class="token" style="background-color: #4c1d95;">种类</span>
+<span class="token" style="background-color: #5b21b6;">中</span>
+<span class="token" style="background-color: #1e40af;">语义</span>
+<span class="token" style="background-color: #86198f;">信息</span>
+<span class="token" style="background-color: #166534;">压缩</span>
+<span class="token" style="background-color: #991b1b;">效率</span>
+<span class="token" style="background-color: #115e59;">的</span>
+<span class="token" style="background-color: #3f3f46;">测试</span>
+<span class="token" style="background-color: #4c1d95;">文本</span>
+<span class="token" style="background-color: #5b21b6;">。<br></span>
+<span class="token" style="background-color: #1e40af;">我们</span>
+<span class="token" style="background-color: #86198f;">关注</span>
+<span class="token" style="background-color: #166534;">的是</span>
+<span class="token" style="background-color: #991b1b;">字符</span>
+<span class="token" style="background-color: #115e59;">数和</span>
+<span class="token" style="background-color: #3f3f46;"> token</span>
+<span class="token" style="background-color: #4c1d95;"> </span>
+<span class="token" style="background-color: #5b21b6;">数</span>
+<span class="token" style="background-color: #1e40af;">。</span>
+<span class="token" style="background-color: #86198f;">字符</span>
+<span class="token" style="background-color: #166534;">数</span>
+<span class="token" style="background-color: #991b1b;">按</span>
+<span class="token" style="background-color: #115e59;">原</span>
+<span class="token" style="background-color: #3f3f46;">样</span>
+<span class="token" style="background-color: #4c1d95;">计数</span>
+<span class="token" style="background-color: #5b21b6;">，</span>
+<span class="token" style="background-color: #1e40af;">token</span>
+<span class="token" style="background-color: #86198f;"> </span>
+<span class="token" style="background-color: #166534;">数</span>
+<span class="token" style="background-color: #991b1b;">使用</span>
+<span class="token" style="background-color: #115e59;"> OpenAI</span>
+<span class="token" style="background-color: #3f3f46;"> </span>
+<span class="token" style="background-color: #4c1d95;">提供的</span>
+<span class="token" style="background-color: #5b21b6;"> Token</span>
+<span class="token" style="background-color: #1e40af;">izer</span>
+<span class="token" style="background-color: #86198f;"> </span>
+<span class="token" style="background-color: #166534;">进行</span>
+<span class="token" style="background-color: #991b1b;">测量</span>
+<span class="token" style="background-color: #115e59;">。<br></span>
+<span class="token" style="background-color: #3f3f46;">关于</span>
+<span class="token" style="background-color: #4c1d95;"> token</span>
+<span class="token" style="background-color: #5b21b6;"> </span>
+<span class="token" style="background-color: #1e40af;">数</span>
+<span class="token" style="background-color: #86198f;">，</span>
+<span class="token" style="background-color: #166534;">可能会</span>
+<span class="token" style="background-color: #991b1b;">因</span>
+<span class="token" style="background-color: #115e59;">模型</span>
+<span class="token" style="background-color: #3f3f46;">不同</span>
+<span class="token" style="background-color: #4c1d95;">而</span>
+<span class="token" style="background-color: #5b21b6;">有所</span>
+<span class="token" style="background-color: #1e40af;">差异</span>
+<span class="token" style="background-color: #86198f;">，</span>
+<span class="token" style="background-color: #166534;">但</span>
+<span class="token" style="background-color: #991b1b;">暂且</span>
+<span class="token" style="background-color: #115e59;">以</span>
+<span class="token" style="background-color: #3f3f46;"> GPT</span>
+<span class="token" style="background-color: #4c1d95;">5</span>
+<span class="token" style="background-color: #5b21b6;">.x</span>
+<span class="token" style="background-color: #1e40af;"> </span>
+<span class="token" style="background-color: #86198f;">的</span>
+<span class="token" style="background-color: #166534;"> token</span>
+<span class="token" style="background-color: #991b1b;"> </span>
+<span class="token" style="background-color: #115e59;">计数</span>
+<span class="token" style="background-color: #3f3f46;">作为</span>
+<span class="token" style="background-color: #4c1d95;">临时</span>
+<span class="token" style="background-color: #5b21b6;">数据</span>
+<span class="token" style="background-color: #1e40af;">。<br></span>
+<span class="token" style="background-color: #86198f;">日语</span>
+<span class="token" style="background-color: #166534;">部分</span>
+<span class="token" style="background-color: #991b1b;">由</span>
+<span class="token" style="background-color: #115e59;">测试</span>
+<span class="token" style="background-color: #3f3f46;">执行</span>
+<span class="token" style="background-color: #4c1d95;">者</span>
+<span class="token" style="background-color: #5b21b6;">本人</span>
+<span class="token" style="background-color: #1e40af;">输入</span>
+<span class="token" style="background-color: #86198f;">，</span>
+<span class="token" style="background-color: #166534;">而</span>
+<span class="token" style="background-color: #991b1b;">英语</span>
+<span class="token" style="background-color: #115e59;">、</span>
+<span class="token" style="background-color: #3f3f46;">中文</span>
+<span class="token" style="background-color: #4c1d95;">、</span>
+<span class="token" style="background-color: #5b21b6;">韩</span>
+<span class="token" style="background-color: #1e40af;">语</span>
+<span class="token" style="background-color: #86198f;">部分</span>
+<span class="token" style="background-color: #166534;">为</span>
+<span class="token" style="background-color: #991b1b;"> AI</span>
+<span class="token" style="background-color: #115e59;"> </span>
+<span class="token" style="background-color: #3f3f46;">翻译</span>
+<span class="token" style="background-color: #4c1d95;">。</span>
+<span class="token" style="background-color: #5b21b6;">翻译</span>
+<span class="token" style="background-color: #1e40af;">由</span>
+<span class="token" style="background-color: #86198f;">乐</span>
+<span class="token" style="background-color: #166534;">天</span>
+<span class="token" style="background-color: #991b1b;">推出的</span>
+<span class="token" style="background-color: #115e59;"> Rak</span>
+<span class="token" style="background-color: #3f3f46;">uten</span>
+<span class="token" style="background-color: #4c1d95;"> AI</span>
+<span class="token" style="background-color: #5b21b6;"> </span>
+<span class="token" style="background-color: #1e40af;">3</span>
+<span class="token" style="background-color: #86198f;">.</span>
+<span class="token" style="background-color: #166534;">0</span>
+<span class="token" style="background-color: #991b1b;"> </span>
+<span class="token" style="background-color: #115e59;">完成</span>
+<span class="token" style="background-color: #3f3f46;">。<br></span>
+<span class="token" style="background-color: #4c1d95;">这只是</span>
+<span class="token" style="background-color: #5b21b6;">为了</span>
+<span class="token" style="background-color: #1e40af;">大致</span>
+<span class="token" style="background-color: #86198f;">可视化</span>
+<span class="token" style="background-color: #166534;">语义</span>
+<span class="token" style="background-color: #991b1b;">信息的</span>
+<span class="token" style="background-color: #115e59;">压缩</span>
+<span class="token" style="background-color: #3f3f46;">率</span>
+<span class="token" style="background-color: #4c1d95;">与</span>
+<span class="token" style="background-color: #5b21b6;"> token</span>
+<span class="token" style="background-color: #1e40af;"> </span>
+<span class="token" style="background-color: #86198f;">效率</span>
+<span class="token" style="background-color: #166534;">，</span>
+<span class="token" style="background-color: #991b1b;">请不要</span>
+<span class="token" style="background-color: #115e59;">过分</span>
+<span class="token" style="background-color: #3f3f46;">追求</span>
+<span class="token" style="background-color: #4c1d95;">严格的</span>
+<span class="token" style="background-color: #5b21b6;">严谨</span>
+<span class="token" style="background-color: #1e40af;">性</span>
+<span class="token" style="background-color: #86198f;">。<br></span>
+<span class="token" style="background-color: #166534;">至此</span>
+<span class="token" style="background-color: #991b1b;">，</span>
+<span class="token" style="background-color: #115e59;">测试</span>
+<span class="token" style="background-color: #3f3f46;">用</span>
+<span class="token" style="background-color: #4c1d95;">文本</span>
+<span class="token" style="background-color: #5b21b6;">结束</span>
+<span class="token" style="background-color: #1e40af;">。</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>RakutenAI-3.0 - 中国語 - 文章2</title>
+    <style>
+        :root {
+            --bg: #111111;
+            --panel: #1a1a1a;
+            --text: #eeeeee;
+            --muted: #b5b5b5;
+            --accent: #0ea5e9;
+            --border: #2a2a2a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .panel {
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .panel h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-box {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .text-area {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .token-container {
+            line-height: 2.2;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="capture-area">
+        <div class="header">
+            <div class="breadcrumb">Tokenizer Dashboard</div>
+            <h2>RakutenAI-3.0 &gt; 中国語 &gt; 文章2</h2>
+        </div>
+        <div class="panel">
+            <h3> 統計情報</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">88</div>
+                    <div class="stat-label">文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">58</div>
+                    <div class="stat-label">トークン数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">1.517</div>
+                    <div class="stat-label">トークンあたり文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">65.91%</div>
+                    <div class="stat-label">トークン消費</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3> 原文</h3>
+            <div class="text-area">诶，真心说，香蕉是不是超好吃啊？哈哈
+怎么说呢，那种绵密又粉糯的独特口感，简直让人受不了
+而且放上几天开始发黑的时候，那股甜味，简直没法挡！
+配牛奶一起吃，真的绝了，太好吃了！</div>
+        </div>
+        <div class="panel">
+            <h3> トークン分割結果</h3>
+            <div class="token-container">
+                <span class="token" style="background-color: #1e40af;">诶</span>
+<span class="token" style="background-color: #86198f;">，</span>
+<span class="token" style="background-color: #166534;">真心</span>
+<span class="token" style="background-color: #991b1b;">说</span>
+<span class="token" style="background-color: #115e59;">，</span>
+<span class="token" style="background-color: #3f3f46;">香蕉</span>
+<span class="token" style="background-color: #4c1d95;">是不是</span>
+<span class="token" style="background-color: #5b21b6;">超</span>
+<span class="token" style="background-color: #1e40af;">好吃</span>
+<span class="token" style="background-color: #86198f;">啊</span>
+<span class="token" style="background-color: #166534;">？</span>
+<span class="token" style="background-color: #991b1b;">哈哈</span>
+<span class="token" style="background-color: #115e59;"><br></span>
+<span class="token" style="background-color: #3f3f46;">怎么说</span>
+<span class="token" style="background-color: #4c1d95;">呢</span>
+<span class="token" style="background-color: #5b21b6;">，</span>
+<span class="token" style="background-color: #1e40af;">那种</span>
+<span class="token" style="background-color: #86198f;">绵</span>
+<span class="token" style="background-color: #166534;">密</span>
+<span class="token" style="background-color: #991b1b;">又</span>
+<span class="token" style="background-color: #115e59;">粉</span>
+<span class="token" style="background-color: #3f3f46;">糯</span>
+<span class="token" style="background-color: #4c1d95;">的</span>
+<span class="token" style="background-color: #5b21b6;">独特</span>
+<span class="token" style="background-color: #1e40af;">口感</span>
+<span class="token" style="background-color: #86198f;">，</span>
+<span class="token" style="background-color: #166534;">简直</span>
+<span class="token" style="background-color: #991b1b;">让人</span>
+<span class="token" style="background-color: #115e59;">受不了</span>
+<span class="token" style="background-color: #3f3f46;"><br></span>
+<span class="token" style="background-color: #4c1d95;">而且</span>
+<span class="token" style="background-color: #5b21b6;">放</span>
+<span class="token" style="background-color: #1e40af;">上</span>
+<span class="token" style="background-color: #86198f;">几天</span>
+<span class="token" style="background-color: #166534;">开始</span>
+<span class="token" style="background-color: #991b1b;">发</span>
+<span class="token" style="background-color: #115e59;">黑</span>
+<span class="token" style="background-color: #3f3f46;">的时候</span>
+<span class="token" style="background-color: #4c1d95;">，</span>
+<span class="token" style="background-color: #5b21b6;">那股</span>
+<span class="token" style="background-color: #1e40af;">甜</span>
+<span class="token" style="background-color: #86198f;">味</span>
+<span class="token" style="background-color: #166534;">，</span>
+<span class="token" style="background-color: #991b1b;">简直</span>
+<span class="token" style="background-color: #115e59;">没法</span>
+<span class="token" style="background-color: #3f3f46;">挡</span>
+<span class="token" style="background-color: #4c1d95;">！<br></span>
+<span class="token" style="background-color: #5b21b6;">配</span>
+<span class="token" style="background-color: #1e40af;">牛奶</span>
+<span class="token" style="background-color: #86198f;">一起吃</span>
+<span class="token" style="background-color: #166534;">，</span>
+<span class="token" style="background-color: #991b1b;">真的</span>
+<span class="token" style="background-color: #115e59;">绝</span>
+<span class="token" style="background-color: #3f3f46;">了</span>
+<span class="token" style="background-color: #4c1d95;">，</span>
+<span class="token" style="background-color: #5b21b6;">太好</span>
+<span class="token" style="background-color: #1e40af;">吃了</span>
+<span class="token" style="background-color: #86198f;">！</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

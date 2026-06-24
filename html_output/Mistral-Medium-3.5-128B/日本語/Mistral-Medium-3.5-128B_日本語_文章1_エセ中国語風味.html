@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Mistral-Medium-3.5-128B - 日本語 - 文章1(エセ中国語風味)</title>
+    <style>
+        :root {
+            --bg: #111111;
+            --panel: #1a1a1a;
+            --text: #eeeeee;
+            --muted: #b5b5b5;
+            --accent: #0ea5e9;
+            --border: #2a2a2a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .panel {
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .panel h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-box {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .text-area {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .token-container {
+            line-height: 2.2;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="capture-area">
+        <div class="header">
+            <div class="breadcrumb">Tokenizer Dashboard</div>
+            <h2>Mistral-Medium-3.5-128B &gt; 日本語 &gt; 文章1(エセ中国語風味)</h2>
+        </div>
+        <div class="panel">
+            <h3> 統計情報</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">215</div>
+                    <div class="stat-label">文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">189</div>
+                    <div class="stat-label">トークン数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">1.138</div>
+                    <div class="stat-label">トークンあたり文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">87.91%</div>
+                    <div class="stat-label">トークン消費</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3> 原文</h3>
+            <div class="text-area">此乃文字種類於意味情報圧縮効率測定之試験用文本。
+所観者、文字数与令牌数。
+文字数者即文字数計数、令牌数者以OpenAI公開Tokenizer測定。
+令牌数関於模型差異或有出現、然姑且以GPT5.x於令牌数測定結果為暫定資料。
+日本語関於試験実行者自入力、英語・中国語・韓国語関於AI翻訳。
+翻訳委任於楽天所出Rakuten AI 3.0。
+本文本飽迄為意味情報圧縮率与令牌効率之概略可視化用物、故勿求厳密。
+以上、試験用文章終。</div>
+        </div>
+        <div class="panel">
+            <h3> トークン分割結果</h3>
+            <div class="token-container">
+                <span class="token" style="background-color: #1e40af;">此</span>
+<span class="token" style="background-color: #86198f;">乃</span>
+<span class="token" style="background-color: #166534;">文字</span>
+<span class="token" style="background-color: #991b1b;">種類</span>
+<span class="token" style="background-color: #115e59;">於</span>
+<span class="token" style="background-color: #3f3f46;">意味</span>
+<span class="token" style="background-color: #4c1d95;">情報</span>
+<span class="token" style="background-color: #5b21b6;">圧(2)</span>
+<span class="token" style="background-color: #1e40af;">縮(2)</span>
+<span class="token" style="background-color: #86198f;">効(2)</span>
+<span class="token" style="background-color: #166534;">率</span>
+<span class="token" style="background-color: #991b1b;">測(2)</span>
+<span class="token" style="background-color: #115e59;">定</span>
+<span class="token" style="background-color: #3f3f46;">之</span>
+<span class="token" style="background-color: #4c1d95;">試</span>
+<span class="token" style="background-color: #5b21b6;">験(2)</span>
+<span class="token" style="background-color: #1e40af;">用</span>
+<span class="token" style="background-color: #86198f;">文</span>
+<span class="token" style="background-color: #166534;">本</span>
+<span class="token" style="background-color: #991b1b;">。<br></span>
+<span class="token" style="background-color: #115e59;">所</span>
+<span class="token" style="background-color: #3f3f46;">観</span>
+<span class="token" style="background-color: #4c1d95;">者</span>
+<span class="token" style="background-color: #5b21b6;">、</span>
+<span class="token" style="background-color: #1e40af;">文字</span>
+<span class="token" style="background-color: #86198f;">数</span>
+<span class="token" style="background-color: #166534;">与</span>
+<span class="token" style="background-color: #991b1b;">令</span>
+<span class="token" style="background-color: #115e59;">牌</span>
+<span class="token" style="background-color: #3f3f46;">数</span>
+<span class="token" style="background-color: #4c1d95;">。<br></span>
+<span class="token" style="background-color: #5b21b6;">文字</span>
+<span class="token" style="background-color: #1e40af;">数</span>
+<span class="token" style="background-color: #86198f;">者</span>
+<span class="token" style="background-color: #166534;">即</span>
+<span class="token" style="background-color: #991b1b;">文字</span>
+<span class="token" style="background-color: #115e59;">数</span>
+<span class="token" style="background-color: #3f3f46;">計</span>
+<span class="token" style="background-color: #4c1d95;">数</span>
+<span class="token" style="background-color: #5b21b6;">、</span>
+<span class="token" style="background-color: #1e40af;">令</span>
+<span class="token" style="background-color: #86198f;">牌</span>
+<span class="token" style="background-color: #166534;">数</span>
+<span class="token" style="background-color: #991b1b;">者</span>
+<span class="token" style="background-color: #115e59;">以</span>
+<span class="token" style="background-color: #3f3f46;">Open</span>
+<span class="token" style="background-color: #4c1d95;">AI</span>
+<span class="token" style="background-color: #5b21b6;">公開</span>
+<span class="token" style="background-color: #1e40af;">Tokenizer</span>
+<span class="token" style="background-color: #86198f;">測(2)</span>
+<span class="token" style="background-color: #166534;">定</span>
+<span class="token" style="background-color: #991b1b;">。<br></span>
+<span class="token" style="background-color: #115e59;">令</span>
+<span class="token" style="background-color: #3f3f46;">牌</span>
+<span class="token" style="background-color: #4c1d95;">数</span>
+<span class="token" style="background-color: #5b21b6;">関</span>
+<span class="token" style="background-color: #1e40af;">於</span>
+<span class="token" style="background-color: #86198f;">模</span>
+<span class="token" style="background-color: #166534;">型</span>
+<span class="token" style="background-color: #991b1b;">差</span>
+<span class="token" style="background-color: #115e59;">異(2)</span>
+<span class="token" style="background-color: #3f3f46;">或</span>
+<span class="token" style="background-color: #4c1d95;">有</span>
+<span class="token" style="background-color: #5b21b6;">出</span>
+<span class="token" style="background-color: #1e40af;">現</span>
+<span class="token" style="background-color: #86198f;">、</span>
+<span class="token" style="background-color: #166534;">然</span>
+<span class="token" style="background-color: #991b1b;">姑(2)</span>
+<span class="token" style="background-color: #115e59;">且</span>
+<span class="token" style="background-color: #3f3f46;">以</span>
+<span class="token" style="background-color: #4c1d95;">G</span>
+<span class="token" style="background-color: #5b21b6;">PT</span>
+<span class="token" style="background-color: #1e40af;">5</span>
+<span class="token" style="background-color: #86198f;">.x</span>
+<span class="token" style="background-color: #166534;">於</span>
+<span class="token" style="background-color: #991b1b;">令</span>
+<span class="token" style="background-color: #115e59;">牌</span>
+<span class="token" style="background-color: #3f3f46;">数</span>
+<span class="token" style="background-color: #4c1d95;">測(2)</span>
+<span class="token" style="background-color: #5b21b6;">定</span>
+<span class="token" style="background-color: #1e40af;">結果</span>
+<span class="token" style="background-color: #86198f;">為</span>
+<span class="token" style="background-color: #166534;">暫(2)</span>
+<span class="token" style="background-color: #991b1b;">定</span>
+<span class="token" style="background-color: #115e59;">資</span>
+<span class="token" style="background-color: #3f3f46;">料</span>
+<span class="token" style="background-color: #4c1d95;">。<br></span>
+<span class="token" style="background-color: #5b21b6;">日本</span>
+<span class="token" style="background-color: #1e40af;">語</span>
+<span class="token" style="background-color: #86198f;">関</span>
+<span class="token" style="background-color: #166534;">於</span>
+<span class="token" style="background-color: #991b1b;">試</span>
+<span class="token" style="background-color: #115e59;">験(2)</span>
+<span class="token" style="background-color: #3f3f46;">実</span>
+<span class="token" style="background-color: #4c1d95;">行</span>
+<span class="token" style="background-color: #5b21b6;">者</span>
+<span class="token" style="background-color: #1e40af;">自</span>
+<span class="token" style="background-color: #86198f;">入</span>
+<span class="token" style="background-color: #166534;">力</span>
+<span class="token" style="background-color: #991b1b;">、</span>
+<span class="token" style="background-color: #115e59;">英語</span>
+<span class="token" style="background-color: #3f3f46;">・</span>
+<span class="token" style="background-color: #4c1d95;">中国</span>
+<span class="token" style="background-color: #5b21b6;">語</span>
+<span class="token" style="background-color: #1e40af;">・</span>
+<span class="token" style="background-color: #86198f;">韓国</span>
+<span class="token" style="background-color: #166534;">語</span>
+<span class="token" style="background-color: #991b1b;">関</span>
+<span class="token" style="background-color: #115e59;">於</span>
+<span class="token" style="background-color: #3f3f46;">AI</span>
+<span class="token" style="background-color: #4c1d95;">翻</span>
+<span class="token" style="background-color: #5b21b6;">訳</span>
+<span class="token" style="background-color: #1e40af;">。<br></span>
+<span class="token" style="background-color: #86198f;">翻</span>
+<span class="token" style="background-color: #166534;">訳</span>
+<span class="token" style="background-color: #991b1b;">委</span>
+<span class="token" style="background-color: #115e59;">任</span>
+<span class="token" style="background-color: #3f3f46;">於</span>
+<span class="token" style="background-color: #4c1d95;">楽</span>
+<span class="token" style="background-color: #5b21b6;">天</span>
+<span class="token" style="background-color: #1e40af;">所</span>
+<span class="token" style="background-color: #86198f;">出</span>
+<span class="token" style="background-color: #166534;">R</span>
+<span class="token" style="background-color: #991b1b;">ak</span>
+<span class="token" style="background-color: #115e59;">uten</span>
+<span class="token" style="background-color: #3f3f46;"> AI</span>
+<span class="token" style="background-color: #4c1d95;"> </span>
+<span class="token" style="background-color: #5b21b6;">3</span>
+<span class="token" style="background-color: #1e40af;">.</span>
+<span class="token" style="background-color: #86198f;">0</span>
+<span class="token" style="background-color: #166534;">。<br></span>
+<span class="token" style="background-color: #991b1b;">本</span>
+<span class="token" style="background-color: #115e59;">文</span>
+<span class="token" style="background-color: #3f3f46;">本</span>
+<span class="token" style="background-color: #4c1d95;">飽(2)</span>
+<span class="token" style="background-color: #5b21b6;">迄(2)</span>
+<span class="token" style="background-color: #1e40af;">為</span>
+<span class="token" style="background-color: #86198f;">意味</span>
+<span class="token" style="background-color: #166534;">情報</span>
+<span class="token" style="background-color: #991b1b;">圧(2)</span>
+<span class="token" style="background-color: #115e59;">縮(2)</span>
+<span class="token" style="background-color: #3f3f46;">率</span>
+<span class="token" style="background-color: #4c1d95;">与</span>
+<span class="token" style="background-color: #5b21b6;">令</span>
+<span class="token" style="background-color: #1e40af;">牌</span>
+<span class="token" style="background-color: #86198f;">効(2)</span>
+<span class="token" style="background-color: #166534;">率</span>
+<span class="token" style="background-color: #991b1b;">之</span>
+<span class="token" style="background-color: #115e59;">概</span>
+<span class="token" style="background-color: #3f3f46;">略</span>
+<span class="token" style="background-color: #4c1d95;">可</span>
+<span class="token" style="background-color: #5b21b6;">視</span>
+<span class="token" style="background-color: #1e40af;">化</span>
+<span class="token" style="background-color: #86198f;">用</span>
+<span class="token" style="background-color: #166534;">物</span>
+<span class="token" style="background-color: #991b1b;">、</span>
+<span class="token" style="background-color: #115e59;">故</span>
+<span class="token" style="background-color: #3f3f46;">勿(2)</span>
+<span class="token" style="background-color: #4c1d95;">求</span>
+<span class="token" style="background-color: #5b21b6;">厳(2)</span>
+<span class="token" style="background-color: #1e40af;">密</span>
+<span class="token" style="background-color: #86198f;">。<br></span>
+<span class="token" style="background-color: #166534;">以上</span>
+<span class="token" style="background-color: #991b1b;">、</span>
+<span class="token" style="background-color: #115e59;">試</span>
+<span class="token" style="background-color: #3f3f46;">験(2)</span>
+<span class="token" style="background-color: #4c1d95;">用</span>
+<span class="token" style="background-color: #5b21b6;">文章</span>
+<span class="token" style="background-color: #1e40af;">終</span>
+<span class="token" style="background-color: #86198f;">。</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

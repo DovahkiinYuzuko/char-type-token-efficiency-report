@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Qwen2.5-72B-Instruct - 日本語 - 文章1(漢字なしバージョン)</title>
+    <style>
+        :root {
+            --bg: #111111;
+            --panel: #1a1a1a;
+            --text: #eeeeee;
+            --muted: #b5b5b5;
+            --accent: #0ea5e9;
+            --border: #2a2a2a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .panel {
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .panel h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-box {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .text-area {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .token-container {
+            line-height: 2.2;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="capture-area">
+        <div class="header">
+            <div class="breadcrumb">Tokenizer Dashboard</div>
+            <h2>Qwen2.5-72B-Instruct &gt; 日本語 &gt; 文章1(漢字なしバージョン)</h2>
+        </div>
+        <div class="panel">
+            <h3> 統計情報</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">423</div>
+                    <div class="stat-label">文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">281</div>
+                    <div class="stat-label">トークン数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">1.505</div>
+                    <div class="stat-label">トークンあたり文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">66.43%</div>
+                    <div class="stat-label">トークン消費</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3> 原文</h3>
+            <div class="text-area">これは、もじのしゅるいにおける、いみじょうほうのあっしゅくこうりつをはかるためのテストようテキストです。
+なにをみるのかというと、もじすうと、トークンすうです。もじすうはそのままもじすうをカウントし、トークンすうは、OpenAIがだしているTokenizerをもちいてはかります。
+トークンすうにかんしてはモデルによってさがでるかもしれませんが、とりあえずGPT5.xでのトークンすうそくていをいったんのデータとさせていただきます。
+にほんごにかんしてはテストじっこうしゃがみずからもじをにゅうりょくしているのですが、えいご・ちゅうごくご・かんこくごにかんしてはAIによるほんやくです。ほんやくは、らくてんがだしているRakuten AI 3.0にまかせます。
+あくまでいみじょうほうのあっしゅくりつとトークンこうりつをなんとなくかしかするものなので、げんみつさはもとめないでください。
+これで、テストようぶんしょうのおわりとさせていただきます。</div>
+        </div>
+        <div class="panel">
+            <h3> トークン分割結果</h3>
+            <div class="token-container">
+                <span class="token" style="background-color: #1e40af;">これは</span>
+<span class="token" style="background-color: #86198f;">、</span>
+<span class="token" style="background-color: #166534;">も</span>
+<span class="token" style="background-color: #991b1b;">じ</span>
+<span class="token" style="background-color: #115e59;">の</span>
+<span class="token" style="background-color: #3f3f46;">し</span>
+<span class="token" style="background-color: #4c1d95;">ゅ</span>
+<span class="token" style="background-color: #5b21b6;">る</span>
+<span class="token" style="background-color: #1e40af;">い</span>
+<span class="token" style="background-color: #86198f;">における</span>
+<span class="token" style="background-color: #166534;">、</span>
+<span class="token" style="background-color: #991b1b;">い</span>
+<span class="token" style="background-color: #115e59;">み</span>
+<span class="token" style="background-color: #3f3f46;">じ</span>
+<span class="token" style="background-color: #4c1d95;">ょう</span>
+<span class="token" style="background-color: #5b21b6;">ほう</span>
+<span class="token" style="background-color: #1e40af;">の</span>
+<span class="token" style="background-color: #86198f;">あ</span>
+<span class="token" style="background-color: #166534;">っ</span>
+<span class="token" style="background-color: #991b1b;">し</span>
+<span class="token" style="background-color: #115e59;">ゅ</span>
+<span class="token" style="background-color: #3f3f46;">く</span>
+<span class="token" style="background-color: #4c1d95;">こう</span>
+<span class="token" style="background-color: #5b21b6;">り</span>
+<span class="token" style="background-color: #1e40af;">つ</span>
+<span class="token" style="background-color: #86198f;">を</span>
+<span class="token" style="background-color: #166534;">は</span>
+<span class="token" style="background-color: #991b1b;">かる</span>
+<span class="token" style="background-color: #115e59;">ため</span>
+<span class="token" style="background-color: #3f3f46;">の</span>
+<span class="token" style="background-color: #4c1d95;">テスト</span>
+<span class="token" style="background-color: #5b21b6;">よう</span>
+<span class="token" style="background-color: #1e40af;">テ</span>
+<span class="token" style="background-color: #86198f;">キ</span>
+<span class="token" style="background-color: #166534;">スト</span>
+<span class="token" style="background-color: #991b1b;">です</span>
+<span class="token" style="background-color: #115e59;">。<br></span>
+<span class="token" style="background-color: #3f3f46;">な</span>
+<span class="token" style="background-color: #4c1d95;">に</span>
+<span class="token" style="background-color: #5b21b6;">を</span>
+<span class="token" style="background-color: #1e40af;">み</span>
+<span class="token" style="background-color: #86198f;">る</span>
+<span class="token" style="background-color: #166534;">のか</span>
+<span class="token" style="background-color: #991b1b;">という</span>
+<span class="token" style="background-color: #115e59;">と</span>
+<span class="token" style="background-color: #3f3f46;">、</span>
+<span class="token" style="background-color: #4c1d95;">も</span>
+<span class="token" style="background-color: #5b21b6;">じ</span>
+<span class="token" style="background-color: #1e40af;">す</span>
+<span class="token" style="background-color: #86198f;">う</span>
+<span class="token" style="background-color: #166534;">と</span>
+<span class="token" style="background-color: #991b1b;">、</span>
+<span class="token" style="background-color: #115e59;">トー</span>
+<span class="token" style="background-color: #3f3f46;">ク</span>
+<span class="token" style="background-color: #4c1d95;">ン</span>
+<span class="token" style="background-color: #5b21b6;">す</span>
+<span class="token" style="background-color: #1e40af;">う</span>
+<span class="token" style="background-color: #86198f;">です</span>
+<span class="token" style="background-color: #166534;">。</span>
+<span class="token" style="background-color: #991b1b;">も</span>
+<span class="token" style="background-color: #115e59;">じ</span>
+<span class="token" style="background-color: #3f3f46;">す</span>
+<span class="token" style="background-color: #4c1d95;">う</span>
+<span class="token" style="background-color: #5b21b6;">は</span>
+<span class="token" style="background-color: #1e40af;">そのまま</span>
+<span class="token" style="background-color: #86198f;">も</span>
+<span class="token" style="background-color: #166534;">じ</span>
+<span class="token" style="background-color: #991b1b;">す</span>
+<span class="token" style="background-color: #115e59;">う</span>
+<span class="token" style="background-color: #3f3f46;">を</span>
+<span class="token" style="background-color: #4c1d95;">カ</span>
+<span class="token" style="background-color: #5b21b6;">ウ</span>
+<span class="token" style="background-color: #1e40af;">ント</span>
+<span class="token" style="background-color: #86198f;">し</span>
+<span class="token" style="background-color: #166534;">、</span>
+<span class="token" style="background-color: #991b1b;">トー</span>
+<span class="token" style="background-color: #115e59;">ク</span>
+<span class="token" style="background-color: #3f3f46;">ン</span>
+<span class="token" style="background-color: #4c1d95;">す</span>
+<span class="token" style="background-color: #5b21b6;">う</span>
+<span class="token" style="background-color: #1e40af;">は</span>
+<span class="token" style="background-color: #86198f;">、</span>
+<span class="token" style="background-color: #166534;">Open</span>
+<span class="token" style="background-color: #991b1b;">AI</span>
+<span class="token" style="background-color: #115e59;">が</span>
+<span class="token" style="background-color: #3f3f46;">だ</span>
+<span class="token" style="background-color: #4c1d95;">している</span>
+<span class="token" style="background-color: #5b21b6;">Tokenizer</span>
+<span class="token" style="background-color: #1e40af;">を</span>
+<span class="token" style="background-color: #86198f;">もち</span>
+<span class="token" style="background-color: #166534;">いて</span>
+<span class="token" style="background-color: #991b1b;">は</span>
+<span class="token" style="background-color: #115e59;">かり</span>
+<span class="token" style="background-color: #3f3f46;">ます</span>
+<span class="token" style="background-color: #4c1d95;">。<br></span>
+<span class="token" style="background-color: #5b21b6;">トー</span>
+<span class="token" style="background-color: #1e40af;">ク</span>
+<span class="token" style="background-color: #86198f;">ン</span>
+<span class="token" style="background-color: #166534;">す</span>
+<span class="token" style="background-color: #991b1b;">う</span>
+<span class="token" style="background-color: #115e59;">に</span>
+<span class="token" style="background-color: #3f3f46;">か</span>
+<span class="token" style="background-color: #4c1d95;">ん</span>
+<span class="token" style="background-color: #5b21b6;">して</span>
+<span class="token" style="background-color: #1e40af;">は</span>
+<span class="token" style="background-color: #86198f;">モデル</span>
+<span class="token" style="background-color: #166534;">によって</span>
+<span class="token" style="background-color: #991b1b;">さ</span>
+<span class="token" style="background-color: #115e59;">が</span>
+<span class="token" style="background-color: #3f3f46;">で</span>
+<span class="token" style="background-color: #4c1d95;">る</span>
+<span class="token" style="background-color: #5b21b6;">かもしれませんが</span>
+<span class="token" style="background-color: #1e40af;">、</span>
+<span class="token" style="background-color: #86198f;">とりあえず</span>
+<span class="token" style="background-color: #166534;">G</span>
+<span class="token" style="background-color: #991b1b;">PT</span>
+<span class="token" style="background-color: #115e59;">5</span>
+<span class="token" style="background-color: #3f3f46;">.x</span>
+<span class="token" style="background-color: #4c1d95;">での</span>
+<span class="token" style="background-color: #5b21b6;">トー</span>
+<span class="token" style="background-color: #1e40af;">ク</span>
+<span class="token" style="background-color: #86198f;">ン</span>
+<span class="token" style="background-color: #166534;">す</span>
+<span class="token" style="background-color: #991b1b;">う</span>
+<span class="token" style="background-color: #115e59;">そ</span>
+<span class="token" style="background-color: #3f3f46;">く</span>
+<span class="token" style="background-color: #4c1d95;">てい</span>
+<span class="token" style="background-color: #5b21b6;">を</span>
+<span class="token" style="background-color: #1e40af;">いった</span>
+<span class="token" style="background-color: #86198f;">ん</span>
+<span class="token" style="background-color: #166534;">の</span>
+<span class="token" style="background-color: #991b1b;">データ</span>
+<span class="token" style="background-color: #115e59;">と</span>
+<span class="token" style="background-color: #3f3f46;">させて</span>
+<span class="token" style="background-color: #4c1d95;">いただ</span>
+<span class="token" style="background-color: #5b21b6;">きます</span>
+<span class="token" style="background-color: #1e40af;">。<br></span>
+<span class="token" style="background-color: #86198f;">に</span>
+<span class="token" style="background-color: #166534;">ほ</span>
+<span class="token" style="background-color: #991b1b;">ん</span>
+<span class="token" style="background-color: #115e59;">ご</span>
+<span class="token" style="background-color: #3f3f46;">に</span>
+<span class="token" style="background-color: #4c1d95;">か</span>
+<span class="token" style="background-color: #5b21b6;">ん</span>
+<span class="token" style="background-color: #1e40af;">して</span>
+<span class="token" style="background-color: #86198f;">は</span>
+<span class="token" style="background-color: #166534;">テスト</span>
+<span class="token" style="background-color: #991b1b;">じ</span>
+<span class="token" style="background-color: #115e59;">っ</span>
+<span class="token" style="background-color: #3f3f46;">こう</span>
+<span class="token" style="background-color: #4c1d95;">しゃ</span>
+<span class="token" style="background-color: #5b21b6;">が</span>
+<span class="token" style="background-color: #1e40af;">み</span>
+<span class="token" style="background-color: #86198f;">ず</span>
+<span class="token" style="background-color: #166534;">から</span>
+<span class="token" style="background-color: #991b1b;">も</span>
+<span class="token" style="background-color: #115e59;">じ</span>
+<span class="token" style="background-color: #3f3f46;">を</span>
+<span class="token" style="background-color: #4c1d95;">に</span>
+<span class="token" style="background-color: #5b21b6;">ゅ</span>
+<span class="token" style="background-color: #1e40af;">う</span>
+<span class="token" style="background-color: #86198f;">り</span>
+<span class="token" style="background-color: #166534;">ょ</span>
+<span class="token" style="background-color: #991b1b;">く</span>
+<span class="token" style="background-color: #115e59;">している</span>
+<span class="token" style="background-color: #3f3f46;">のですが</span>
+<span class="token" style="background-color: #4c1d95;">、</span>
+<span class="token" style="background-color: #5b21b6;">え</span>
+<span class="token" style="background-color: #1e40af;">い</span>
+<span class="token" style="background-color: #86198f;">ご</span>
+<span class="token" style="background-color: #166534;">・</span>
+<span class="token" style="background-color: #991b1b;">ち</span>
+<span class="token" style="background-color: #115e59;">ゅ</span>
+<span class="token" style="background-color: #3f3f46;">う</span>
+<span class="token" style="background-color: #4c1d95;">ご</span>
+<span class="token" style="background-color: #5b21b6;">く</span>
+<span class="token" style="background-color: #1e40af;">ご</span>
+<span class="token" style="background-color: #86198f;">・</span>
+<span class="token" style="background-color: #166534;">か</span>
+<span class="token" style="background-color: #991b1b;">ん</span>
+<span class="token" style="background-color: #115e59;">こ</span>
+<span class="token" style="background-color: #3f3f46;">く</span>
+<span class="token" style="background-color: #4c1d95;">ご</span>
+<span class="token" style="background-color: #5b21b6;">に</span>
+<span class="token" style="background-color: #1e40af;">か</span>
+<span class="token" style="background-color: #86198f;">ん</span>
+<span class="token" style="background-color: #166534;">して</span>
+<span class="token" style="background-color: #991b1b;">は</span>
+<span class="token" style="background-color: #115e59;">AI</span>
+<span class="token" style="background-color: #3f3f46;">による</span>
+<span class="token" style="background-color: #4c1d95;">ほ</span>
+<span class="token" style="background-color: #5b21b6;">ん</span>
+<span class="token" style="background-color: #1e40af;">や</span>
+<span class="token" style="background-color: #86198f;">く</span>
+<span class="token" style="background-color: #166534;">です</span>
+<span class="token" style="background-color: #991b1b;">。</span>
+<span class="token" style="background-color: #115e59;">ほ</span>
+<span class="token" style="background-color: #3f3f46;">ん</span>
+<span class="token" style="background-color: #4c1d95;">や</span>
+<span class="token" style="background-color: #5b21b6;">く</span>
+<span class="token" style="background-color: #1e40af;">は</span>
+<span class="token" style="background-color: #86198f;">、</span>
+<span class="token" style="background-color: #166534;">らく</span>
+<span class="token" style="background-color: #991b1b;">て</span>
+<span class="token" style="background-color: #115e59;">ん</span>
+<span class="token" style="background-color: #3f3f46;">が</span>
+<span class="token" style="background-color: #4c1d95;">だ</span>
+<span class="token" style="background-color: #5b21b6;">している</span>
+<span class="token" style="background-color: #1e40af;">R</span>
+<span class="token" style="background-color: #86198f;">ak</span>
+<span class="token" style="background-color: #166534;">uten</span>
+<span class="token" style="background-color: #991b1b;"> AI</span>
+<span class="token" style="background-color: #115e59;"> </span>
+<span class="token" style="background-color: #3f3f46;">3</span>
+<span class="token" style="background-color: #4c1d95;">.</span>
+<span class="token" style="background-color: #5b21b6;">0</span>
+<span class="token" style="background-color: #1e40af;">に</span>
+<span class="token" style="background-color: #86198f;">ま</span>
+<span class="token" style="background-color: #166534;">か</span>
+<span class="token" style="background-color: #991b1b;">せ</span>
+<span class="token" style="background-color: #115e59;">ます</span>
+<span class="token" style="background-color: #3f3f46;">。<br></span>
+<span class="token" style="background-color: #4c1d95;">あ</span>
+<span class="token" style="background-color: #5b21b6;">く</span>
+<span class="token" style="background-color: #1e40af;">まで</span>
+<span class="token" style="background-color: #86198f;">い</span>
+<span class="token" style="background-color: #166534;">み</span>
+<span class="token" style="background-color: #991b1b;">じ</span>
+<span class="token" style="background-color: #115e59;">ょう</span>
+<span class="token" style="background-color: #3f3f46;">ほう</span>
+<span class="token" style="background-color: #4c1d95;">の</span>
+<span class="token" style="background-color: #5b21b6;">あ</span>
+<span class="token" style="background-color: #1e40af;">っ</span>
+<span class="token" style="background-color: #86198f;">し</span>
+<span class="token" style="background-color: #166534;">ゅ</span>
+<span class="token" style="background-color: #991b1b;">くり</span>
+<span class="token" style="background-color: #115e59;">つ</span>
+<span class="token" style="background-color: #3f3f46;">と</span>
+<span class="token" style="background-color: #4c1d95;">トー</span>
+<span class="token" style="background-color: #5b21b6;">ク</span>
+<span class="token" style="background-color: #1e40af;">ン</span>
+<span class="token" style="background-color: #86198f;">こう</span>
+<span class="token" style="background-color: #166534;">り</span>
+<span class="token" style="background-color: #991b1b;">つ</span>
+<span class="token" style="background-color: #115e59;">を</span>
+<span class="token" style="background-color: #3f3f46;">なんと</span>
+<span class="token" style="background-color: #4c1d95;">なく</span>
+<span class="token" style="background-color: #5b21b6;">か</span>
+<span class="token" style="background-color: #1e40af;">しか</span>
+<span class="token" style="background-color: #86198f;">する</span>
+<span class="token" style="background-color: #166534;">もの</span>
+<span class="token" style="background-color: #991b1b;">なので</span>
+<span class="token" style="background-color: #115e59;">、</span>
+<span class="token" style="background-color: #3f3f46;">げ</span>
+<span class="token" style="background-color: #4c1d95;">ん</span>
+<span class="token" style="background-color: #5b21b6;">み</span>
+<span class="token" style="background-color: #1e40af;">つ</span>
+<span class="token" style="background-color: #86198f;">さ</span>
+<span class="token" style="background-color: #166534;">は</span>
+<span class="token" style="background-color: #991b1b;">も</span>
+<span class="token" style="background-color: #115e59;">と</span>
+<span class="token" style="background-color: #3f3f46;">め</span>
+<span class="token" style="background-color: #4c1d95;">ない</span>
+<span class="token" style="background-color: #5b21b6;">で</span>
+<span class="token" style="background-color: #1e40af;">ください</span>
+<span class="token" style="background-color: #86198f;">。<br></span>
+<span class="token" style="background-color: #166534;">これ</span>
+<span class="token" style="background-color: #991b1b;">で</span>
+<span class="token" style="background-color: #115e59;">、</span>
+<span class="token" style="background-color: #3f3f46;">テスト</span>
+<span class="token" style="background-color: #4c1d95;">よう</span>
+<span class="token" style="background-color: #5b21b6;">ぶ</span>
+<span class="token" style="background-color: #1e40af;">ん</span>
+<span class="token" style="background-color: #86198f;">しょう</span>
+<span class="token" style="background-color: #166534;">のお</span>
+<span class="token" style="background-color: #991b1b;">わり</span>
+<span class="token" style="background-color: #115e59;">と</span>
+<span class="token" style="background-color: #3f3f46;">させて</span>
+<span class="token" style="background-color: #4c1d95;">いただ</span>
+<span class="token" style="background-color: #5b21b6;">きます</span>
+<span class="token" style="background-color: #1e40af;">。</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Qwen2.5-72B-Instruct - 英語 - 文章2</title>
+    <style>
+        :root {
+            --bg: #111111;
+            --panel: #1a1a1a;
+            --text: #eeeeee;
+            --muted: #b5b5b5;
+            --accent: #0ea5e9;
+            --border: #2a2a2a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .panel {
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .panel h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-box {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .text-area {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .token-container {
+            line-height: 2.2;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="capture-area">
+        <div class="header">
+            <div class="breadcrumb">Tokenizer Dashboard</div>
+            <h2>Qwen2.5-72B-Instruct &gt; 英語 &gt; 文章2</h2>
+        </div>
+        <div class="panel">
+            <h3> 統計情報</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">306</div>
+                    <div class="stat-label">文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">66</div>
+                    <div class="stat-label">トークン数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">4.636</div>
+                    <div class="stat-label">トークンあたり文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">21.57%</div>
+                    <div class="stat-label">トークン消費</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3> 原文</h3>
+            <div class="text-area">Like, seriously, bananas are sooo good, right? lol  
+I mean, there’s just something irresistible about that soft, kinda dense texture.  
+And when you leave them for a few days and they start getting brown, man, that sweetness is just unbeatable!  
+Having them with milk makes them taste absolutely amazing!</div>
+        </div>
+        <div class="panel">
+            <h3> トークン分割結果</h3>
+            <div class="token-container">
+                <span class="token" style="background-color: #1e40af;">Like</span>
+<span class="token" style="background-color: #86198f;">,</span>
+<span class="token" style="background-color: #166534;"> seriously</span>
+<span class="token" style="background-color: #991b1b;">,</span>
+<span class="token" style="background-color: #115e59;"> bananas</span>
+<span class="token" style="background-color: #3f3f46;"> are</span>
+<span class="token" style="background-color: #4c1d95;"> so</span>
+<span class="token" style="background-color: #5b21b6;">oo</span>
+<span class="token" style="background-color: #1e40af;"> good</span>
+<span class="token" style="background-color: #86198f;">,</span>
+<span class="token" style="background-color: #166534;"> right</span>
+<span class="token" style="background-color: #991b1b;">?</span>
+<span class="token" style="background-color: #115e59;"> lol</span>
+<span class="token" style="background-color: #3f3f46;">  <br></span>
+<span class="token" style="background-color: #4c1d95;">I</span>
+<span class="token" style="background-color: #5b21b6;"> mean</span>
+<span class="token" style="background-color: #1e40af;">,</span>
+<span class="token" style="background-color: #86198f;"> there</span>
+<span class="token" style="background-color: #166534;">’s</span>
+<span class="token" style="background-color: #991b1b;"> just</span>
+<span class="token" style="background-color: #115e59;"> something</span>
+<span class="token" style="background-color: #3f3f46;"> irresistible</span>
+<span class="token" style="background-color: #4c1d95;"> about</span>
+<span class="token" style="background-color: #5b21b6;"> that</span>
+<span class="token" style="background-color: #1e40af;"> soft</span>
+<span class="token" style="background-color: #86198f;">,</span>
+<span class="token" style="background-color: #166534;"> kinda</span>
+<span class="token" style="background-color: #991b1b;"> dense</span>
+<span class="token" style="background-color: #115e59;"> texture</span>
+<span class="token" style="background-color: #3f3f46;">.</span>
+<span class="token" style="background-color: #4c1d95;">  <br></span>
+<span class="token" style="background-color: #5b21b6;">And</span>
+<span class="token" style="background-color: #1e40af;"> when</span>
+<span class="token" style="background-color: #86198f;"> you</span>
+<span class="token" style="background-color: #166534;"> leave</span>
+<span class="token" style="background-color: #991b1b;"> them</span>
+<span class="token" style="background-color: #115e59;"> for</span>
+<span class="token" style="background-color: #3f3f46;"> a</span>
+<span class="token" style="background-color: #4c1d95;"> few</span>
+<span class="token" style="background-color: #5b21b6;"> days</span>
+<span class="token" style="background-color: #1e40af;"> and</span>
+<span class="token" style="background-color: #86198f;"> they</span>
+<span class="token" style="background-color: #166534;"> start</span>
+<span class="token" style="background-color: #991b1b;"> getting</span>
+<span class="token" style="background-color: #115e59;"> brown</span>
+<span class="token" style="background-color: #3f3f46;">,</span>
+<span class="token" style="background-color: #4c1d95;"> man</span>
+<span class="token" style="background-color: #5b21b6;">,</span>
+<span class="token" style="background-color: #1e40af;"> that</span>
+<span class="token" style="background-color: #86198f;"> sweetness</span>
+<span class="token" style="background-color: #166534;"> is</span>
+<span class="token" style="background-color: #991b1b;"> just</span>
+<span class="token" style="background-color: #115e59;"> unbe</span>
+<span class="token" style="background-color: #3f3f46;">atable</span>
+<span class="token" style="background-color: #4c1d95;">!</span>
+<span class="token" style="background-color: #5b21b6;">  <br></span>
+<span class="token" style="background-color: #1e40af;">Having</span>
+<span class="token" style="background-color: #86198f;"> them</span>
+<span class="token" style="background-color: #166534;"> with</span>
+<span class="token" style="background-color: #991b1b;"> milk</span>
+<span class="token" style="background-color: #115e59;"> makes</span>
+<span class="token" style="background-color: #3f3f46;"> them</span>
+<span class="token" style="background-color: #4c1d95;"> taste</span>
+<span class="token" style="background-color: #5b21b6;"> absolutely</span>
+<span class="token" style="background-color: #1e40af;"> amazing</span>
+<span class="token" style="background-color: #86198f;">!</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Qwen3.6-27B - 日本語 - 文章1(漢字増やしバージョン)</title>
+    <style>
+        :root {
+            --bg: #111111;
+            --panel: #1a1a1a;
+            --text: #eeeeee;
+            --muted: #b5b5b5;
+            --accent: #0ea5e9;
+            --border: #2a2a2a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .panel {
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .panel h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-box {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .text-area {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .token-container {
+            line-height: 2.2;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="capture-area">
+        <div class="header">
+            <div class="breadcrumb">Tokenizer Dashboard</div>
+            <h2>Qwen3.6-27B &gt; 日本語 &gt; 文章1(漢字増やしバージョン)</h2>
+        </div>
+        <div class="panel">
+            <h3> 統計情報</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">347</div>
+                    <div class="stat-label">文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">178</div>
+                    <div class="stat-label">トークン数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">1.949</div>
+                    <div class="stat-label">トークンあたり文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">51.30%</div>
+                    <div class="stat-label">トークン消費</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3> 原文</h3>
+            <div class="text-area">之は、文字の種類に於ける、意味情報の圧縮効率を測る為のテスト用テキストです。
+何を見るのかと言うと、文字数と、トークン数です。文字数は其の侭文字数をカウントし、トークン数は、OpenAIが出しているTokenizerを用いて測ります。
+トークン数に関してはモデルによって差が出るかもしれませんが、とりあえずGPT5.xでのトークン数測定を一旦のデータとさせて頂きます。
+日本語に関してはテスト実行者が自ら文字を入力しているのですが、英語・中国語・韓国語に関してはAIによる翻訳です。翻訳は、楽天が出しているRakuten AI 3.0に任せます。
+飽く迄で意味情報の圧縮率とトークン効率をなんとなく可視化する物なので、厳密さは求めないでください。
+これで、テスト用文章の終わりとさせて頂きます。</div>
+        </div>
+        <div class="panel">
+            <h3> トークン分割結果</h3>
+            <div class="token-container">
+                <span class="token" style="background-color: #1e40af;">之</span>
+<span class="token" style="background-color: #86198f;">は</span>
+<span class="token" style="background-color: #166534;">、</span>
+<span class="token" style="background-color: #991b1b;">文字</span>
+<span class="token" style="background-color: #115e59;">の種類</span>
+<span class="token" style="background-color: #3f3f46;">に</span>
+<span class="token" style="background-color: #4c1d95;">於</span>
+<span class="token" style="background-color: #5b21b6;">ける</span>
+<span class="token" style="background-color: #1e40af;">、</span>
+<span class="token" style="background-color: #86198f;">意味</span>
+<span class="token" style="background-color: #166534;">情報の</span>
+<span class="token" style="background-color: #991b1b;">圧</span>
+<span class="token" style="background-color: #115e59;">縮</span>
+<span class="token" style="background-color: #3f3f46;">効率</span>
+<span class="token" style="background-color: #4c1d95;">を</span>
+<span class="token" style="background-color: #5b21b6;">測</span>
+<span class="token" style="background-color: #1e40af;">る</span>
+<span class="token" style="background-color: #86198f;">為</span>
+<span class="token" style="background-color: #166534;">の</span>
+<span class="token" style="background-color: #991b1b;">テスト</span>
+<span class="token" style="background-color: #115e59;">用</span>
+<span class="token" style="background-color: #3f3f46;">テキスト</span>
+<span class="token" style="background-color: #4c1d95;">です</span>
+<span class="token" style="background-color: #5b21b6;">。</span>
+<span class="token" style="background-color: #1e40af;"><br></span>
+<span class="token" style="background-color: #86198f;">何</span>
+<span class="token" style="background-color: #166534;">を見る</span>
+<span class="token" style="background-color: #991b1b;">のか</span>
+<span class="token" style="background-color: #115e59;">と言う</span>
+<span class="token" style="background-color: #3f3f46;">と</span>
+<span class="token" style="background-color: #4c1d95;">、</span>
+<span class="token" style="background-color: #5b21b6;">文字</span>
+<span class="token" style="background-color: #1e40af;">数</span>
+<span class="token" style="background-color: #86198f;">と</span>
+<span class="token" style="background-color: #166534;">、</span>
+<span class="token" style="background-color: #991b1b;">トーク</span>
+<span class="token" style="background-color: #115e59;">ン</span>
+<span class="token" style="background-color: #3f3f46;">数</span>
+<span class="token" style="background-color: #4c1d95;">です</span>
+<span class="token" style="background-color: #5b21b6;">。</span>
+<span class="token" style="background-color: #1e40af;">文字</span>
+<span class="token" style="background-color: #86198f;">数は</span>
+<span class="token" style="background-color: #166534;">其</span>
+<span class="token" style="background-color: #991b1b;">の</span>
+<span class="token" style="background-color: #115e59;">侭(2)</span>
+<span class="token" style="background-color: #3f3f46;">文字</span>
+<span class="token" style="background-color: #4c1d95;">数を</span>
+<span class="token" style="background-color: #5b21b6;">カウント</span>
+<span class="token" style="background-color: #1e40af;">し</span>
+<span class="token" style="background-color: #86198f;">、</span>
+<span class="token" style="background-color: #166534;">トーク</span>
+<span class="token" style="background-color: #991b1b;">ン</span>
+<span class="token" style="background-color: #115e59;">数は</span>
+<span class="token" style="background-color: #3f3f46;">、</span>
+<span class="token" style="background-color: #4c1d95;">Open</span>
+<span class="token" style="background-color: #5b21b6;">AI</span>
+<span class="token" style="background-color: #1e40af;">が出</span>
+<span class="token" style="background-color: #86198f;">している</span>
+<span class="token" style="background-color: #166534;">Tokenizer</span>
+<span class="token" style="background-color: #991b1b;">を用</span>
+<span class="token" style="background-color: #115e59;">いて</span>
+<span class="token" style="background-color: #3f3f46;">測</span>
+<span class="token" style="background-color: #4c1d95;">ります</span>
+<span class="token" style="background-color: #5b21b6;">。</span>
+<span class="token" style="background-color: #1e40af;"><br></span>
+<span class="token" style="background-color: #86198f;">トーク</span>
+<span class="token" style="background-color: #166534;">ン</span>
+<span class="token" style="background-color: #991b1b;">数</span>
+<span class="token" style="background-color: #115e59;">に関しては</span>
+<span class="token" style="background-color: #3f3f46;">モデル</span>
+<span class="token" style="background-color: #4c1d95;">によって</span>
+<span class="token" style="background-color: #5b21b6;">差</span>
+<span class="token" style="background-color: #1e40af;">が出る</span>
+<span class="token" style="background-color: #86198f;">かもしれませんが</span>
+<span class="token" style="background-color: #166534;">、</span>
+<span class="token" style="background-color: #991b1b;">とりあえず</span>
+<span class="token" style="background-color: #115e59;">G</span>
+<span class="token" style="background-color: #3f3f46;">PT</span>
+<span class="token" style="background-color: #4c1d95;">5</span>
+<span class="token" style="background-color: #5b21b6;">.x</span>
+<span class="token" style="background-color: #1e40af;">での</span>
+<span class="token" style="background-color: #86198f;">トーク</span>
+<span class="token" style="background-color: #166534;">ン</span>
+<span class="token" style="background-color: #991b1b;">数</span>
+<span class="token" style="background-color: #115e59;">測定</span>
+<span class="token" style="background-color: #3f3f46;">を</span>
+<span class="token" style="background-color: #4c1d95;">一旦</span>
+<span class="token" style="background-color: #5b21b6;">の</span>
+<span class="token" style="background-color: #1e40af;">データ</span>
+<span class="token" style="background-color: #86198f;">と</span>
+<span class="token" style="background-color: #166534;">させて頂きます</span>
+<span class="token" style="background-color: #991b1b;">。</span>
+<span class="token" style="background-color: #115e59;"><br></span>
+<span class="token" style="background-color: #3f3f46;">日本語</span>
+<span class="token" style="background-color: #4c1d95;">に関しては</span>
+<span class="token" style="background-color: #5b21b6;">テスト</span>
+<span class="token" style="background-color: #1e40af;">実</span>
+<span class="token" style="background-color: #86198f;">行者</span>
+<span class="token" style="background-color: #166534;">が</span>
+<span class="token" style="background-color: #991b1b;">自ら</span>
+<span class="token" style="background-color: #115e59;">文字</span>
+<span class="token" style="background-color: #3f3f46;">を入力</span>
+<span class="token" style="background-color: #4c1d95;">している</span>
+<span class="token" style="background-color: #5b21b6;">のですが</span>
+<span class="token" style="background-color: #1e40af;">、</span>
+<span class="token" style="background-color: #86198f;">英語</span>
+<span class="token" style="background-color: #166534;">・</span>
+<span class="token" style="background-color: #991b1b;">中国</span>
+<span class="token" style="background-color: #115e59;">語</span>
+<span class="token" style="background-color: #3f3f46;">・</span>
+<span class="token" style="background-color: #4c1d95;">韓国</span>
+<span class="token" style="background-color: #5b21b6;">語</span>
+<span class="token" style="background-color: #1e40af;">に関しては</span>
+<span class="token" style="background-color: #86198f;">AI</span>
+<span class="token" style="background-color: #166534;">による</span>
+<span class="token" style="background-color: #991b1b;">翻訳</span>
+<span class="token" style="background-color: #115e59;">です</span>
+<span class="token" style="background-color: #3f3f46;">。</span>
+<span class="token" style="background-color: #4c1d95;">翻訳</span>
+<span class="token" style="background-color: #5b21b6;">は</span>
+<span class="token" style="background-color: #1e40af;">、</span>
+<span class="token" style="background-color: #86198f;">楽天</span>
+<span class="token" style="background-color: #166534;">が出</span>
+<span class="token" style="background-color: #991b1b;">している</span>
+<span class="token" style="background-color: #115e59;">R</span>
+<span class="token" style="background-color: #3f3f46;">ak</span>
+<span class="token" style="background-color: #4c1d95;">uten</span>
+<span class="token" style="background-color: #5b21b6;"> AI</span>
+<span class="token" style="background-color: #1e40af;"> </span>
+<span class="token" style="background-color: #86198f;">3</span>
+<span class="token" style="background-color: #166534;">.</span>
+<span class="token" style="background-color: #991b1b;">0</span>
+<span class="token" style="background-color: #115e59;">に</span>
+<span class="token" style="background-color: #3f3f46;">任せ</span>
+<span class="token" style="background-color: #4c1d95;">ます</span>
+<span class="token" style="background-color: #5b21b6;">。</span>
+<span class="token" style="background-color: #1e40af;"><br></span>
+<span class="token" style="background-color: #86198f;">飽</span>
+<span class="token" style="background-color: #166534;">く</span>
+<span class="token" style="background-color: #991b1b;">迄</span>
+<span class="token" style="background-color: #115e59;">で</span>
+<span class="token" style="background-color: #3f3f46;">意味</span>
+<span class="token" style="background-color: #4c1d95;">情報の</span>
+<span class="token" style="background-color: #5b21b6;">圧</span>
+<span class="token" style="background-color: #1e40af;">縮</span>
+<span class="token" style="background-color: #86198f;">率</span>
+<span class="token" style="background-color: #166534;">と</span>
+<span class="token" style="background-color: #991b1b;">トーク</span>
+<span class="token" style="background-color: #115e59;">ン</span>
+<span class="token" style="background-color: #3f3f46;">効率</span>
+<span class="token" style="background-color: #4c1d95;">を</span>
+<span class="token" style="background-color: #5b21b6;">なんとなく</span>
+<span class="token" style="background-color: #1e40af;">可</span>
+<span class="token" style="background-color: #86198f;">視</span>
+<span class="token" style="background-color: #166534;">化する</span>
+<span class="token" style="background-color: #991b1b;">物</span>
+<span class="token" style="background-color: #115e59;">なので</span>
+<span class="token" style="background-color: #3f3f46;">、</span>
+<span class="token" style="background-color: #4c1d95;">厳</span>
+<span class="token" style="background-color: #5b21b6;">密</span>
+<span class="token" style="background-color: #1e40af;">さは</span>
+<span class="token" style="background-color: #86198f;">求め</span>
+<span class="token" style="background-color: #166534;">ない</span>
+<span class="token" style="background-color: #991b1b;">で</span>
+<span class="token" style="background-color: #115e59;">ください</span>
+<span class="token" style="background-color: #3f3f46;">。</span>
+<span class="token" style="background-color: #4c1d95;"><br></span>
+<span class="token" style="background-color: #5b21b6;">これで</span>
+<span class="token" style="background-color: #1e40af;">、</span>
+<span class="token" style="background-color: #86198f;">テスト</span>
+<span class="token" style="background-color: #166534;">用</span>
+<span class="token" style="background-color: #991b1b;">文章</span>
+<span class="token" style="background-color: #115e59;">の</span>
+<span class="token" style="background-color: #3f3f46;">終わ</span>
+<span class="token" style="background-color: #4c1d95;">りと</span>
+<span class="token" style="background-color: #5b21b6;">させて頂きます</span>
+<span class="token" style="background-color: #1e40af;">。</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

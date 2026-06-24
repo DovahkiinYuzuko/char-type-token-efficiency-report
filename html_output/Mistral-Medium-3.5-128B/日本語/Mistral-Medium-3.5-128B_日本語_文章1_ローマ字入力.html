@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Mistral-Medium-3.5-128B - 日本語 - 文章1(ローマ字入力)</title>
+    <style>
+        :root {
+            --bg: #111111;
+            --panel: #1a1a1a;
+            --text: #eeeeee;
+            --muted: #b5b5b5;
+            --accent: #0ea5e9;
+            --border: #2a2a2a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .panel {
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .panel h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-box {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .text-area {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .token-container {
+            line-height: 2.2;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="capture-area">
+        <div class="header">
+            <div class="breadcrumb">Tokenizer Dashboard</div>
+            <h2>Mistral-Medium-3.5-128B &gt; 日本語 &gt; 文章1(ローマ字入力)</h2>
+        </div>
+        <div class="panel">
+            <h3> 統計情報</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">713</div>
+                    <div class="stat-label">文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">290</div>
+                    <div class="stat-label">トークン数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">2.459</div>
+                    <div class="stat-label">トークンあたり文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">40.67%</div>
+                    <div class="stat-label">トークン消費</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3> 原文</h3>
+            <div class="text-area">koreha,mojinosyuruiniokeru,imijouhounoassyukukourituwohakarutamenotesutoyoutekisutodesu.
+naniwomirunokatoiuto,mojisuuto,to-kunsuudesu.mojisuuhasonomamamojisuuwokaunntosi,to-kunnsuuha,OpenAIgadasiteiruTokenizerwomotiitehakarimasu.
+to-kunnsuunikannsitehamoderuniyottesagaderukamosiremasennga,toriaezuGPT5.xdenoto-kunnsuusokuteiwoittannnode-tatosaseteitadakimasu.
+nihonngonikannsitehatesutojikkoshagamizukaramojiwonyuuryokusiteirunodesuga,eigo,tyuugokugo,kannkokugonikannsitehaAIniyoruhonnyakudesu.honnyakuha,rakutengadasiteiruRakuten AI 3.0nimakasemasu.
+akumadeimijouhounoassyukuritutoto-kunnkourituwonanntonakukasikasurumononanode,gennmitusahamotomenaidekudasai.
+korede,tesutoyoubunnshounoowaritosaseteitadakimasu.</div>
+        </div>
+        <div class="panel">
+            <h3> トークン分割結果</h3>
+            <div class="token-container">
+                <span class="token" style="background-color: #1e40af;">k</span>
+<span class="token" style="background-color: #86198f;">ore</span>
+<span class="token" style="background-color: #166534;">ha</span>
+<span class="token" style="background-color: #991b1b;">,m</span>
+<span class="token" style="background-color: #115e59;">oj</span>
+<span class="token" style="background-color: #3f3f46;">inos</span>
+<span class="token" style="background-color: #4c1d95;">y</span>
+<span class="token" style="background-color: #5b21b6;">uru</span>
+<span class="token" style="background-color: #1e40af;">inio</span>
+<span class="token" style="background-color: #86198f;">ker</span>
+<span class="token" style="background-color: #166534;">u</span>
+<span class="token" style="background-color: #991b1b;">,</span>
+<span class="token" style="background-color: #115e59;">im</span>
+<span class="token" style="background-color: #3f3f46;">ij</span>
+<span class="token" style="background-color: #4c1d95;">ou</span>
+<span class="token" style="background-color: #5b21b6;">h</span>
+<span class="token" style="background-color: #1e40af;">oun</span>
+<span class="token" style="background-color: #86198f;">o</span>
+<span class="token" style="background-color: #166534;">assy</span>
+<span class="token" style="background-color: #991b1b;">uk</span>
+<span class="token" style="background-color: #115e59;">uk</span>
+<span class="token" style="background-color: #3f3f46;">our</span>
+<span class="token" style="background-color: #4c1d95;">itu</span>
+<span class="token" style="background-color: #5b21b6;">woh</span>
+<span class="token" style="background-color: #1e40af;">akar</span>
+<span class="token" style="background-color: #86198f;">ut</span>
+<span class="token" style="background-color: #166534;">amen</span>
+<span class="token" style="background-color: #991b1b;">otes</span>
+<span class="token" style="background-color: #115e59;">ut</span>
+<span class="token" style="background-color: #3f3f46;">oy</span>
+<span class="token" style="background-color: #4c1d95;">oute</span>
+<span class="token" style="background-color: #5b21b6;">kis</span>
+<span class="token" style="background-color: #1e40af;">ut</span>
+<span class="token" style="background-color: #86198f;">odes</span>
+<span class="token" style="background-color: #166534;">u</span>
+<span class="token" style="background-color: #991b1b;">.<br></span>
+<span class="token" style="background-color: #115e59;">n</span>
+<span class="token" style="background-color: #3f3f46;">ani</span>
+<span class="token" style="background-color: #4c1d95;">w</span>
+<span class="token" style="background-color: #5b21b6;">omir</span>
+<span class="token" style="background-color: #1e40af;">un</span>
+<span class="token" style="background-color: #86198f;">ok</span>
+<span class="token" style="background-color: #166534;">ato</span>
+<span class="token" style="background-color: #991b1b;">i</span>
+<span class="token" style="background-color: #115e59;">uto</span>
+<span class="token" style="background-color: #3f3f46;">,m</span>
+<span class="token" style="background-color: #4c1d95;">oj</span>
+<span class="token" style="background-color: #5b21b6;">isu</span>
+<span class="token" style="background-color: #1e40af;">uto</span>
+<span class="token" style="background-color: #86198f;">,</span>
+<span class="token" style="background-color: #166534;">to</span>
+<span class="token" style="background-color: #991b1b;">-k</span>
+<span class="token" style="background-color: #115e59;">un</span>
+<span class="token" style="background-color: #3f3f46;">su</span>
+<span class="token" style="background-color: #4c1d95;">udes</span>
+<span class="token" style="background-color: #5b21b6;">u</span>
+<span class="token" style="background-color: #1e40af;">.m</span>
+<span class="token" style="background-color: #86198f;">oj</span>
+<span class="token" style="background-color: #166534;">isu</span>
+<span class="token" style="background-color: #991b1b;">uh</span>
+<span class="token" style="background-color: #115e59;">ason</span>
+<span class="token" style="background-color: #3f3f46;">om</span>
+<span class="token" style="background-color: #4c1d95;">am</span>
+<span class="token" style="background-color: #5b21b6;">am</span>
+<span class="token" style="background-color: #1e40af;">oj</span>
+<span class="token" style="background-color: #86198f;">isu</span>
+<span class="token" style="background-color: #166534;">uw</span>
+<span class="token" style="background-color: #991b1b;">oka</span>
+<span class="token" style="background-color: #115e59;">un</span>
+<span class="token" style="background-color: #3f3f46;">nt</span>
+<span class="token" style="background-color: #4c1d95;">osi</span>
+<span class="token" style="background-color: #5b21b6;">,</span>
+<span class="token" style="background-color: #1e40af;">to</span>
+<span class="token" style="background-color: #86198f;">-k</span>
+<span class="token" style="background-color: #166534;">unn</span>
+<span class="token" style="background-color: #991b1b;">su</span>
+<span class="token" style="background-color: #115e59;">u</span>
+<span class="token" style="background-color: #3f3f46;">ha</span>
+<span class="token" style="background-color: #4c1d95;">,</span>
+<span class="token" style="background-color: #5b21b6;">Open</span>
+<span class="token" style="background-color: #1e40af;">AI</span>
+<span class="token" style="background-color: #86198f;">gadas</span>
+<span class="token" style="background-color: #166534;">ite</span>
+<span class="token" style="background-color: #991b1b;">iru</span>
+<span class="token" style="background-color: #115e59;">Tokenizer</span>
+<span class="token" style="background-color: #3f3f46;">w</span>
+<span class="token" style="background-color: #4c1d95;">om</span>
+<span class="token" style="background-color: #5b21b6;">oti</span>
+<span class="token" style="background-color: #1e40af;">ite</span>
+<span class="token" style="background-color: #86198f;">h</span>
+<span class="token" style="background-color: #166534;">akar</span>
+<span class="token" style="background-color: #991b1b;">imas</span>
+<span class="token" style="background-color: #115e59;">u</span>
+<span class="token" style="background-color: #3f3f46;">.<br></span>
+<span class="token" style="background-color: #4c1d95;">to</span>
+<span class="token" style="background-color: #5b21b6;">-k</span>
+<span class="token" style="background-color: #1e40af;">unn</span>
+<span class="token" style="background-color: #86198f;">su</span>
+<span class="token" style="background-color: #166534;">unik</span>
+<span class="token" style="background-color: #991b1b;">ann</span>
+<span class="token" style="background-color: #115e59;">site</span>
+<span class="token" style="background-color: #3f3f46;">ham</span>
+<span class="token" style="background-color: #4c1d95;">oder</span>
+<span class="token" style="background-color: #5b21b6;">un</span>
+<span class="token" style="background-color: #1e40af;">iy</span>
+<span class="token" style="background-color: #86198f;">ottes</span>
+<span class="token" style="background-color: #166534;">ag</span>
+<span class="token" style="background-color: #991b1b;">ader</span>
+<span class="token" style="background-color: #115e59;">uk</span>
+<span class="token" style="background-color: #3f3f46;">amos</span>
+<span class="token" style="background-color: #4c1d95;">ire</span>
+<span class="token" style="background-color: #5b21b6;">mas</span>
+<span class="token" style="background-color: #1e40af;">en</span>
+<span class="token" style="background-color: #86198f;">nga</span>
+<span class="token" style="background-color: #166534;">,t</span>
+<span class="token" style="background-color: #991b1b;">oria</span>
+<span class="token" style="background-color: #115e59;">ez</span>
+<span class="token" style="background-color: #3f3f46;">u</span>
+<span class="token" style="background-color: #4c1d95;">G</span>
+<span class="token" style="background-color: #5b21b6;">PT</span>
+<span class="token" style="background-color: #1e40af;">5</span>
+<span class="token" style="background-color: #86198f;">.x</span>
+<span class="token" style="background-color: #166534;">den</span>
+<span class="token" style="background-color: #991b1b;">oto</span>
+<span class="token" style="background-color: #115e59;">-k</span>
+<span class="token" style="background-color: #3f3f46;">unn</span>
+<span class="token" style="background-color: #4c1d95;">su</span>
+<span class="token" style="background-color: #5b21b6;">us</span>
+<span class="token" style="background-color: #1e40af;">ok</span>
+<span class="token" style="background-color: #86198f;">ute</span>
+<span class="token" style="background-color: #166534;">i</span>
+<span class="token" style="background-color: #991b1b;">wo</span>
+<span class="token" style="background-color: #115e59;">itt</span>
+<span class="token" style="background-color: #3f3f46;">ann</span>
+<span class="token" style="background-color: #4c1d95;">node</span>
+<span class="token" style="background-color: #5b21b6;">-t</span>
+<span class="token" style="background-color: #1e40af;">atos</span>
+<span class="token" style="background-color: #86198f;">as</span>
+<span class="token" style="background-color: #166534;">ete</span>
+<span class="token" style="background-color: #991b1b;">it</span>
+<span class="token" style="background-color: #115e59;">ad</span>
+<span class="token" style="background-color: #3f3f46;">ak</span>
+<span class="token" style="background-color: #4c1d95;">imas</span>
+<span class="token" style="background-color: #5b21b6;">u</span>
+<span class="token" style="background-color: #1e40af;">.<br></span>
+<span class="token" style="background-color: #86198f;">nih</span>
+<span class="token" style="background-color: #166534;">on</span>
+<span class="token" style="background-color: #991b1b;">ng</span>
+<span class="token" style="background-color: #115e59;">onik</span>
+<span class="token" style="background-color: #3f3f46;">ann</span>
+<span class="token" style="background-color: #4c1d95;">site</span>
+<span class="token" style="background-color: #5b21b6;">h</span>
+<span class="token" style="background-color: #1e40af;">ates</span>
+<span class="token" style="background-color: #86198f;">ut</span>
+<span class="token" style="background-color: #166534;">oj</span>
+<span class="token" style="background-color: #991b1b;">ikk</span>
+<span class="token" style="background-color: #115e59;">osh</span>
+<span class="token" style="background-color: #3f3f46;">agam</span>
+<span class="token" style="background-color: #4c1d95;">iz</span>
+<span class="token" style="background-color: #5b21b6;">uk</span>
+<span class="token" style="background-color: #1e40af;">aram</span>
+<span class="token" style="background-color: #86198f;">oji</span>
+<span class="token" style="background-color: #166534;">w</span>
+<span class="token" style="background-color: #991b1b;">ony</span>
+<span class="token" style="background-color: #115e59;">u</span>
+<span class="token" style="background-color: #3f3f46;">ury</span>
+<span class="token" style="background-color: #4c1d95;">ok</span>
+<span class="token" style="background-color: #5b21b6;">us</span>
+<span class="token" style="background-color: #1e40af;">ite</span>
+<span class="token" style="background-color: #86198f;">ir</span>
+<span class="token" style="background-color: #166534;">un</span>
+<span class="token" style="background-color: #991b1b;">odes</span>
+<span class="token" style="background-color: #115e59;">uga</span>
+<span class="token" style="background-color: #3f3f46;">,e</span>
+<span class="token" style="background-color: #4c1d95;">igo</span>
+<span class="token" style="background-color: #5b21b6;">,</span>
+<span class="token" style="background-color: #1e40af;">ty</span>
+<span class="token" style="background-color: #86198f;">u</span>
+<span class="token" style="background-color: #166534;">ug</span>
+<span class="token" style="background-color: #991b1b;">ok</span>
+<span class="token" style="background-color: #115e59;">ugo</span>
+<span class="token" style="background-color: #3f3f46;">,k</span>
+<span class="token" style="background-color: #4c1d95;">ann</span>
+<span class="token" style="background-color: #5b21b6;">kok</span>
+<span class="token" style="background-color: #1e40af;">ug</span>
+<span class="token" style="background-color: #86198f;">onik</span>
+<span class="token" style="background-color: #166534;">ann</span>
+<span class="token" style="background-color: #991b1b;">site</span>
+<span class="token" style="background-color: #115e59;">ha</span>
+<span class="token" style="background-color: #3f3f46;">A</span>
+<span class="token" style="background-color: #4c1d95;">In</span>
+<span class="token" style="background-color: #5b21b6;">iyor</span>
+<span class="token" style="background-color: #1e40af;">uh</span>
+<span class="token" style="background-color: #86198f;">on</span>
+<span class="token" style="background-color: #166534;">ny</span>
+<span class="token" style="background-color: #991b1b;">ak</span>
+<span class="token" style="background-color: #115e59;">udes</span>
+<span class="token" style="background-color: #3f3f46;">u</span>
+<span class="token" style="background-color: #4c1d95;">.h</span>
+<span class="token" style="background-color: #5b21b6;">on</span>
+<span class="token" style="background-color: #1e40af;">ny</span>
+<span class="token" style="background-color: #86198f;">aku</span>
+<span class="token" style="background-color: #166534;">ha</span>
+<span class="token" style="background-color: #991b1b;">,</span>
+<span class="token" style="background-color: #115e59;">rak</span>
+<span class="token" style="background-color: #3f3f46;">ut</span>
+<span class="token" style="background-color: #4c1d95;">eng</span>
+<span class="token" style="background-color: #5b21b6;">adas</span>
+<span class="token" style="background-color: #1e40af;">ite</span>
+<span class="token" style="background-color: #86198f;">iru</span>
+<span class="token" style="background-color: #166534;">R</span>
+<span class="token" style="background-color: #991b1b;">ak</span>
+<span class="token" style="background-color: #115e59;">uten</span>
+<span class="token" style="background-color: #3f3f46;"> AI</span>
+<span class="token" style="background-color: #4c1d95;"> </span>
+<span class="token" style="background-color: #5b21b6;">3</span>
+<span class="token" style="background-color: #1e40af;">.</span>
+<span class="token" style="background-color: #86198f;">0</span>
+<span class="token" style="background-color: #166534;">nim</span>
+<span class="token" style="background-color: #991b1b;">ak</span>
+<span class="token" style="background-color: #115e59;">as</span>
+<span class="token" style="background-color: #3f3f46;">emas</span>
+<span class="token" style="background-color: #4c1d95;">u</span>
+<span class="token" style="background-color: #5b21b6;">.<br></span>
+<span class="token" style="background-color: #1e40af;">ak</span>
+<span class="token" style="background-color: #86198f;">um</span>
+<span class="token" style="background-color: #166534;">ade</span>
+<span class="token" style="background-color: #991b1b;">im</span>
+<span class="token" style="background-color: #115e59;">ij</span>
+<span class="token" style="background-color: #3f3f46;">ou</span>
+<span class="token" style="background-color: #4c1d95;">h</span>
+<span class="token" style="background-color: #5b21b6;">oun</span>
+<span class="token" style="background-color: #1e40af;">o</span>
+<span class="token" style="background-color: #86198f;">assy</span>
+<span class="token" style="background-color: #166534;">uk</span>
+<span class="token" style="background-color: #991b1b;">ur</span>
+<span class="token" style="background-color: #115e59;">it</span>
+<span class="token" style="background-color: #3f3f46;">ut</span>
+<span class="token" style="background-color: #4c1d95;">oto</span>
+<span class="token" style="background-color: #5b21b6;">-k</span>
+<span class="token" style="background-color: #1e40af;">unn</span>
+<span class="token" style="background-color: #86198f;">k</span>
+<span class="token" style="background-color: #166534;">our</span>
+<span class="token" style="background-color: #991b1b;">itu</span>
+<span class="token" style="background-color: #115e59;">won</span>
+<span class="token" style="background-color: #3f3f46;">annt</span>
+<span class="token" style="background-color: #4c1d95;">on</span>
+<span class="token" style="background-color: #5b21b6;">ak</span>
+<span class="token" style="background-color: #1e40af;">ukas</span>
+<span class="token" style="background-color: #86198f;">ikas</span>
+<span class="token" style="background-color: #166534;">ur</span>
+<span class="token" style="background-color: #991b1b;">um</span>
+<span class="token" style="background-color: #115e59;">on</span>
+<span class="token" style="background-color: #3f3f46;">onan</span>
+<span class="token" style="background-color: #4c1d95;">ode</span>
+<span class="token" style="background-color: #5b21b6;">,</span>
+<span class="token" style="background-color: #1e40af;">gen</span>
+<span class="token" style="background-color: #86198f;">n</span>
+<span class="token" style="background-color: #166534;">mit</span>
+<span class="token" style="background-color: #991b1b;">usah</span>
+<span class="token" style="background-color: #115e59;">am</span>
+<span class="token" style="background-color: #3f3f46;">ot</span>
+<span class="token" style="background-color: #4c1d95;">omena</span>
+<span class="token" style="background-color: #5b21b6;">ide</span>
+<span class="token" style="background-color: #1e40af;">k</span>
+<span class="token" style="background-color: #86198f;">udas</span>
+<span class="token" style="background-color: #166534;">ai</span>
+<span class="token" style="background-color: #991b1b;">.<br></span>
+<span class="token" style="background-color: #115e59;">kor</span>
+<span class="token" style="background-color: #3f3f46;">ede</span>
+<span class="token" style="background-color: #4c1d95;">,</span>
+<span class="token" style="background-color: #5b21b6;">tes</span>
+<span class="token" style="background-color: #1e40af;">ut</span>
+<span class="token" style="background-color: #86198f;">oy</span>
+<span class="token" style="background-color: #166534;">oub</span>
+<span class="token" style="background-color: #991b1b;">unn</span>
+<span class="token" style="background-color: #115e59;">sh</span>
+<span class="token" style="background-color: #3f3f46;">oun</span>
+<span class="token" style="background-color: #4c1d95;">o</span>
+<span class="token" style="background-color: #5b21b6;">ow</span>
+<span class="token" style="background-color: #1e40af;">ar</span>
+<span class="token" style="background-color: #86198f;">itos</span>
+<span class="token" style="background-color: #166534;">as</span>
+<span class="token" style="background-color: #991b1b;">ete</span>
+<span class="token" style="background-color: #115e59;">it</span>
+<span class="token" style="background-color: #3f3f46;">ad</span>
+<span class="token" style="background-color: #4c1d95;">ak</span>
+<span class="token" style="background-color: #5b21b6;">imas</span>
+<span class="token" style="background-color: #1e40af;">u</span>
+<span class="token" style="background-color: #86198f;">.</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

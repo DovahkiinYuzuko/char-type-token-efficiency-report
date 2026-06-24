@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>DeepSeek-V4-Pro - 英語 - 文章1</title>
+    <style>
+        :root {
+            --bg: #111111;
+            --panel: #1a1a1a;
+            --text: #eeeeee;
+            --muted: #b5b5b5;
+            --accent: #0ea5e9;
+            --border: #2a2a2a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .panel {
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .panel h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-box {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .text-area {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .token-container {
+            line-height: 2.2;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="capture-area">
+        <div class="header">
+            <div class="breadcrumb">Tokenizer Dashboard</div>
+            <h2>DeepSeek-V4-Pro &gt; 英語 &gt; 文章1</h2>
+        </div>
+        <div class="panel">
+            <h3> 統計情報</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">789</div>
+                    <div class="stat-label">文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">151</div>
+                    <div class="stat-label">トークン数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">5.225</div>
+                    <div class="stat-label">トークンあたり文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">19.14%</div>
+                    <div class="stat-label">トークン消費</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3> 原文</h3>
+            <div class="text-area">This is a test text for measuring the compression efficiency of semantic information across different writing systems.
+What we will look at are the character count and the token count. The character count is simply the number of characters, and the token count is measured using the Tokenizer provided by OpenAI.
+Token counts may vary depending on the model, but for now we will use measurements on GPT5.x as provisional data.
+For Japanese, the test executor is entering the text manually, whereas the English, Chinese, and Korean versions are AI translations. The translations are handled by Rakuten AI 3.0 released by Rakuten.
+This is only meant to roughly visualize the semantic compression ratio and token efficiency, so please do not demand strict rigor.
+That concludes the test text.</div>
+        </div>
+        <div class="panel">
+            <h3> トークン分割結果</h3>
+            <div class="token-container">
+                <span class="token" style="background-color: #1e40af;">This</span>
+<span class="token" style="background-color: #86198f;"> is</span>
+<span class="token" style="background-color: #166534;"> a</span>
+<span class="token" style="background-color: #991b1b;"> test</span>
+<span class="token" style="background-color: #115e59;"> text</span>
+<span class="token" style="background-color: #3f3f46;"> for</span>
+<span class="token" style="background-color: #4c1d95;"> measuring</span>
+<span class="token" style="background-color: #5b21b6;"> the</span>
+<span class="token" style="background-color: #1e40af;"> compression</span>
+<span class="token" style="background-color: #86198f;"> efficiency</span>
+<span class="token" style="background-color: #166534;"> of</span>
+<span class="token" style="background-color: #991b1b;"> semantic</span>
+<span class="token" style="background-color: #115e59;"> information</span>
+<span class="token" style="background-color: #3f3f46;"> across</span>
+<span class="token" style="background-color: #4c1d95;"> different</span>
+<span class="token" style="background-color: #5b21b6;"> writing</span>
+<span class="token" style="background-color: #1e40af;"> systems</span>
+<span class="token" style="background-color: #86198f;">.<br></span>
+<span class="token" style="background-color: #166534;">What</span>
+<span class="token" style="background-color: #991b1b;"> we</span>
+<span class="token" style="background-color: #115e59;"> will</span>
+<span class="token" style="background-color: #3f3f46;"> look</span>
+<span class="token" style="background-color: #4c1d95;"> at</span>
+<span class="token" style="background-color: #5b21b6;"> are</span>
+<span class="token" style="background-color: #1e40af;"> the</span>
+<span class="token" style="background-color: #86198f;"> character</span>
+<span class="token" style="background-color: #166534;"> count</span>
+<span class="token" style="background-color: #991b1b;"> and</span>
+<span class="token" style="background-color: #115e59;"> the</span>
+<span class="token" style="background-color: #3f3f46;"> token</span>
+<span class="token" style="background-color: #4c1d95;"> count</span>
+<span class="token" style="background-color: #5b21b6;">.</span>
+<span class="token" style="background-color: #1e40af;"> The</span>
+<span class="token" style="background-color: #86198f;"> character</span>
+<span class="token" style="background-color: #166534;"> count</span>
+<span class="token" style="background-color: #991b1b;"> is</span>
+<span class="token" style="background-color: #115e59;"> simply</span>
+<span class="token" style="background-color: #3f3f46;"> the</span>
+<span class="token" style="background-color: #4c1d95;"> number</span>
+<span class="token" style="background-color: #5b21b6;"> of</span>
+<span class="token" style="background-color: #1e40af;"> characters</span>
+<span class="token" style="background-color: #86198f;">,</span>
+<span class="token" style="background-color: #166534;"> and</span>
+<span class="token" style="background-color: #991b1b;"> the</span>
+<span class="token" style="background-color: #115e59;"> token</span>
+<span class="token" style="background-color: #3f3f46;"> count</span>
+<span class="token" style="background-color: #4c1d95;"> is</span>
+<span class="token" style="background-color: #5b21b6;"> measured</span>
+<span class="token" style="background-color: #1e40af;"> using</span>
+<span class="token" style="background-color: #86198f;"> the</span>
+<span class="token" style="background-color: #166534;"> Token</span>
+<span class="token" style="background-color: #991b1b;">izer</span>
+<span class="token" style="background-color: #115e59;"> provided</span>
+<span class="token" style="background-color: #3f3f46;"> by</span>
+<span class="token" style="background-color: #4c1d95;"> OpenAI</span>
+<span class="token" style="background-color: #5b21b6;">.<br></span>
+<span class="token" style="background-color: #1e40af;">Token</span>
+<span class="token" style="background-color: #86198f;"> counts</span>
+<span class="token" style="background-color: #166534;"> may</span>
+<span class="token" style="background-color: #991b1b;"> vary</span>
+<span class="token" style="background-color: #115e59;"> depending</span>
+<span class="token" style="background-color: #3f3f46;"> on</span>
+<span class="token" style="background-color: #4c1d95;"> the</span>
+<span class="token" style="background-color: #5b21b6;"> model</span>
+<span class="token" style="background-color: #1e40af;">,</span>
+<span class="token" style="background-color: #86198f;"> but</span>
+<span class="token" style="background-color: #166534;"> for</span>
+<span class="token" style="background-color: #991b1b;"> now</span>
+<span class="token" style="background-color: #115e59;"> we</span>
+<span class="token" style="background-color: #3f3f46;"> will</span>
+<span class="token" style="background-color: #4c1d95;"> use</span>
+<span class="token" style="background-color: #5b21b6;"> measurements</span>
+<span class="token" style="background-color: #1e40af;"> on</span>
+<span class="token" style="background-color: #86198f;"> GPT</span>
+<span class="token" style="background-color: #166534;">5</span>
+<span class="token" style="background-color: #991b1b;">.x</span>
+<span class="token" style="background-color: #115e59;"> as</span>
+<span class="token" style="background-color: #3f3f46;"> provisional</span>
+<span class="token" style="background-color: #4c1d95;"> data</span>
+<span class="token" style="background-color: #5b21b6;">.<br></span>
+<span class="token" style="background-color: #1e40af;">For</span>
+<span class="token" style="background-color: #86198f;"> Japanese</span>
+<span class="token" style="background-color: #166534;">,</span>
+<span class="token" style="background-color: #991b1b;"> the</span>
+<span class="token" style="background-color: #115e59;"> test</span>
+<span class="token" style="background-color: #3f3f46;"> executor</span>
+<span class="token" style="background-color: #4c1d95;"> is</span>
+<span class="token" style="background-color: #5b21b6;"> entering</span>
+<span class="token" style="background-color: #1e40af;"> the</span>
+<span class="token" style="background-color: #86198f;"> text</span>
+<span class="token" style="background-color: #166534;"> manually</span>
+<span class="token" style="background-color: #991b1b;">,</span>
+<span class="token" style="background-color: #115e59;"> whereas</span>
+<span class="token" style="background-color: #3f3f46;"> the</span>
+<span class="token" style="background-color: #4c1d95;"> English</span>
+<span class="token" style="background-color: #5b21b6;">,</span>
+<span class="token" style="background-color: #1e40af;"> Chinese</span>
+<span class="token" style="background-color: #86198f;">,</span>
+<span class="token" style="background-color: #166534;"> and</span>
+<span class="token" style="background-color: #991b1b;"> Korean</span>
+<span class="token" style="background-color: #115e59;"> versions</span>
+<span class="token" style="background-color: #3f3f46;"> are</span>
+<span class="token" style="background-color: #4c1d95;"> AI</span>
+<span class="token" style="background-color: #5b21b6;"> translations</span>
+<span class="token" style="background-color: #1e40af;">.</span>
+<span class="token" style="background-color: #86198f;"> The</span>
+<span class="token" style="background-color: #166534;"> translations</span>
+<span class="token" style="background-color: #991b1b;"> are</span>
+<span class="token" style="background-color: #115e59;"> handled</span>
+<span class="token" style="background-color: #3f3f46;"> by</span>
+<span class="token" style="background-color: #4c1d95;"> Rak</span>
+<span class="token" style="background-color: #5b21b6;">uten</span>
+<span class="token" style="background-color: #1e40af;"> AI</span>
+<span class="token" style="background-color: #86198f;"> </span>
+<span class="token" style="background-color: #166534;">3</span>
+<span class="token" style="background-color: #991b1b;">.</span>
+<span class="token" style="background-color: #115e59;">0</span>
+<span class="token" style="background-color: #3f3f46;"> released</span>
+<span class="token" style="background-color: #4c1d95;"> by</span>
+<span class="token" style="background-color: #5b21b6;"> Rak</span>
+<span class="token" style="background-color: #1e40af;">uten</span>
+<span class="token" style="background-color: #86198f;">.<br></span>
+<span class="token" style="background-color: #166534;">This</span>
+<span class="token" style="background-color: #991b1b;"> is</span>
+<span class="token" style="background-color: #115e59;"> only</span>
+<span class="token" style="background-color: #3f3f46;"> meant</span>
+<span class="token" style="background-color: #4c1d95;"> to</span>
+<span class="token" style="background-color: #5b21b6;"> roughly</span>
+<span class="token" style="background-color: #1e40af;"> visualize</span>
+<span class="token" style="background-color: #86198f;"> the</span>
+<span class="token" style="background-color: #166534;"> semantic</span>
+<span class="token" style="background-color: #991b1b;"> compression</span>
+<span class="token" style="background-color: #115e59;"> ratio</span>
+<span class="token" style="background-color: #3f3f46;"> and</span>
+<span class="token" style="background-color: #4c1d95;"> token</span>
+<span class="token" style="background-color: #5b21b6;"> efficiency</span>
+<span class="token" style="background-color: #1e40af;">,</span>
+<span class="token" style="background-color: #86198f;"> so</span>
+<span class="token" style="background-color: #166534;"> please</span>
+<span class="token" style="background-color: #991b1b;"> do</span>
+<span class="token" style="background-color: #115e59;"> not</span>
+<span class="token" style="background-color: #3f3f46;"> demand</span>
+<span class="token" style="background-color: #4c1d95;"> strict</span>
+<span class="token" style="background-color: #5b21b6;"> rigor</span>
+<span class="token" style="background-color: #1e40af;">.<br></span>
+<span class="token" style="background-color: #86198f;">That</span>
+<span class="token" style="background-color: #166534;"> concludes</span>
+<span class="token" style="background-color: #991b1b;"> the</span>
+<span class="token" style="background-color: #115e59;"> test</span>
+<span class="token" style="background-color: #3f3f46;"> text</span>
+<span class="token" style="background-color: #4c1d95;">.</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

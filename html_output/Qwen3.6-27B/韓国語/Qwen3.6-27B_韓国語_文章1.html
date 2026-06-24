@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Qwen3.6-27B - 韓国語 - 文章1</title>
+    <style>
+        :root {
+            --bg: #111111;
+            --panel: #1a1a1a;
+            --text: #eeeeee;
+            --muted: #b5b5b5;
+            --accent: #0ea5e9;
+            --border: #2a2a2a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .panel {
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .panel h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-box {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .text-area {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .token-container {
+            line-height: 2.2;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="capture-area">
+        <div class="header">
+            <div class="breadcrumb">Tokenizer Dashboard</div>
+            <h2>Qwen3.6-27B &gt; 韓国語 &gt; 文章1</h2>
+        </div>
+        <div class="panel">
+            <h3> 統計情報</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">353</div>
+                    <div class="stat-label">文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">192</div>
+                    <div class="stat-label">トークン数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">1.839</div>
+                    <div class="stat-label">トークンあたり文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">54.39%</div>
+                    <div class="stat-label">トークン消費</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3> 原文</h3>
+            <div class="text-area">이는 문자 종류별로 의미 정보의 압축 효율을 측정하기 위한 테스트용 텍스트입니다.
+우리가 볼 지표는 글자 수와 토큰 수입니다. 글자 수는 그대로 세고, 토큰 수는 OpenAI가 제공하는 Tokenizer로 측정합니다.
+토큰 수는 모델에 따라 차이가 있을 수 있지만, 우선은 GPT5.x에서의 토큰 수 측정을 임시 데이터로 삼겠습니다.
+일본어는 테스트 실행자가 직접 입력하며, 영어·중국어·한국어는 AI 번역본입니다. 번역은 라쿠텐이 출시한 Rakuten AI 3.0이 담당합니다.
+이는 어디까지나 의미 정보의 압축률과 토큰 효율을 대략적으로 가시화하려는 것이므로, 엄밀함을 요구하지 말아 주세요.
+이것으로 테스트용 문장을 마칩니다.</div>
+        </div>
+        <div class="panel">
+            <h3> トークン分割結果</h3>
+            <div class="token-container">
+                <span class="token" style="background-color: #1e40af;">이는</span>
+<span class="token" style="background-color: #86198f;"> 문자</span>
+<span class="token" style="background-color: #166534;"> 종류</span>
+<span class="token" style="background-color: #991b1b;">별로</span>
+<span class="token" style="background-color: #115e59;"> 의미</span>
+<span class="token" style="background-color: #3f3f46;"> 정보</span>
+<span class="token" style="background-color: #4c1d95;">의</span>
+<span class="token" style="background-color: #5b21b6;"> 압</span>
+<span class="token" style="background-color: #1e40af;">축</span>
+<span class="token" style="background-color: #86198f;"> 효율</span>
+<span class="token" style="background-color: #166534;">을</span>
+<span class="token" style="background-color: #991b1b;"> 측정</span>
+<span class="token" style="background-color: #115e59;">하기</span>
+<span class="token" style="background-color: #3f3f46;"> 위한</span>
+<span class="token" style="background-color: #4c1d95;"> 테스트</span>
+<span class="token" style="background-color: #5b21b6;">용</span>
+<span class="token" style="background-color: #1e40af;"> 텍스트</span>
+<span class="token" style="background-color: #86198f;">입니다</span>
+<span class="token" style="background-color: #166534;">.</span>
+<span class="token" style="background-color: #991b1b;"><br></span>
+<span class="token" style="background-color: #115e59;">우</span>
+<span class="token" style="background-color: #3f3f46;">리가</span>
+<span class="token" style="background-color: #4c1d95;"> 볼</span>
+<span class="token" style="background-color: #5b21b6;"> 지표</span>
+<span class="token" style="background-color: #1e40af;">는</span>
+<span class="token" style="background-color: #86198f;"> 글</span>
+<span class="token" style="background-color: #166534;">자</span>
+<span class="token" style="background-color: #991b1b;"> 수</span>
+<span class="token" style="background-color: #115e59;">와</span>
+<span class="token" style="background-color: #3f3f46;"> 토큰(5)</span>
+<span class="token" style="background-color: #4c1d95;"> 수</span>
+<span class="token" style="background-color: #5b21b6;">입니다</span>
+<span class="token" style="background-color: #1e40af;">.</span>
+<span class="token" style="background-color: #86198f;"> 글</span>
+<span class="token" style="background-color: #166534;">자</span>
+<span class="token" style="background-color: #991b1b;"> 수는</span>
+<span class="token" style="background-color: #115e59;"> 그대로</span>
+<span class="token" style="background-color: #3f3f46;"> 세</span>
+<span class="token" style="background-color: #4c1d95;">고</span>
+<span class="token" style="background-color: #5b21b6;">,</span>
+<span class="token" style="background-color: #1e40af;"> 토큰(5)</span>
+<span class="token" style="background-color: #86198f;"> 수는</span>
+<span class="token" style="background-color: #166534;"> Open</span>
+<span class="token" style="background-color: #991b1b;">AI</span>
+<span class="token" style="background-color: #115e59;">가</span>
+<span class="token" style="background-color: #3f3f46;"> 제공하는</span>
+<span class="token" style="background-color: #4c1d95;"> Token</span>
+<span class="token" style="background-color: #5b21b6;">izer</span>
+<span class="token" style="background-color: #1e40af;">로</span>
+<span class="token" style="background-color: #86198f;"> 측정</span>
+<span class="token" style="background-color: #166534;">합니다</span>
+<span class="token" style="background-color: #991b1b;">.</span>
+<span class="token" style="background-color: #115e59;"><br></span>
+<span class="token" style="background-color: #3f3f46;">토큰(4)</span>
+<span class="token" style="background-color: #4c1d95;"> 수는</span>
+<span class="token" style="background-color: #5b21b6;"> 모델</span>
+<span class="token" style="background-color: #1e40af;">에</span>
+<span class="token" style="background-color: #86198f;"> 따라</span>
+<span class="token" style="background-color: #166534;"> 차이가</span>
+<span class="token" style="background-color: #991b1b;"> 있을</span>
+<span class="token" style="background-color: #115e59;"> 수</span>
+<span class="token" style="background-color: #3f3f46;"> 있지만</span>
+<span class="token" style="background-color: #4c1d95;">,</span>
+<span class="token" style="background-color: #5b21b6;"> 우선</span>
+<span class="token" style="background-color: #1e40af;">은</span>
+<span class="token" style="background-color: #86198f;"> G</span>
+<span class="token" style="background-color: #166534;">PT</span>
+<span class="token" style="background-color: #991b1b;">5</span>
+<span class="token" style="background-color: #115e59;">.x</span>
+<span class="token" style="background-color: #3f3f46;">에서의</span>
+<span class="token" style="background-color: #4c1d95;"> 토큰(5)</span>
+<span class="token" style="background-color: #5b21b6;"> 수</span>
+<span class="token" style="background-color: #1e40af;"> 측</span>
+<span class="token" style="background-color: #86198f;">정을</span>
+<span class="token" style="background-color: #166534;"> 임시</span>
+<span class="token" style="background-color: #991b1b;"> 데이터</span>
+<span class="token" style="background-color: #115e59;">로</span>
+<span class="token" style="background-color: #3f3f46;"> 삼</span>
+<span class="token" style="background-color: #4c1d95;">겠습니다</span>
+<span class="token" style="background-color: #5b21b6;">.</span>
+<span class="token" style="background-color: #1e40af;"><br></span>
+<span class="token" style="background-color: #86198f;">일본</span>
+<span class="token" style="background-color: #166534;">어</span>
+<span class="token" style="background-color: #991b1b;">는</span>
+<span class="token" style="background-color: #115e59;"> 테스트</span>
+<span class="token" style="background-color: #3f3f46;"> 실행(3)</span>
+<span class="token" style="background-color: #4c1d95;">자가</span>
+<span class="token" style="background-color: #5b21b6;"> 직접</span>
+<span class="token" style="background-color: #1e40af;"> 입력</span>
+<span class="token" style="background-color: #86198f;">하며</span>
+<span class="token" style="background-color: #166534;">,</span>
+<span class="token" style="background-color: #991b1b;"> 영어</span>
+<span class="token" style="background-color: #115e59;">·</span>
+<span class="token" style="background-color: #3f3f46;">중</span>
+<span class="token" style="background-color: #4c1d95;">국어</span>
+<span class="token" style="background-color: #5b21b6;">·</span>
+<span class="token" style="background-color: #1e40af;">한국</span>
+<span class="token" style="background-color: #86198f;">어</span>
+<span class="token" style="background-color: #166534;">는</span>
+<span class="token" style="background-color: #991b1b;"> AI</span>
+<span class="token" style="background-color: #115e59;"> 번역</span>
+<span class="token" style="background-color: #3f3f46;">본</span>
+<span class="token" style="background-color: #4c1d95;">입니다</span>
+<span class="token" style="background-color: #5b21b6;">.</span>
+<span class="token" style="background-color: #1e40af;"> 번역</span>
+<span class="token" style="background-color: #86198f;">은</span>
+<span class="token" style="background-color: #166534;"> 라</span>
+<span class="token" style="background-color: #991b1b;">쿠텐(4)</span>
+<span class="token" style="background-color: #115e59;">이</span>
+<span class="token" style="background-color: #3f3f46;"> 출시</span>
+<span class="token" style="background-color: #4c1d95;">한</span>
+<span class="token" style="background-color: #5b21b6;"> Rak</span>
+<span class="token" style="background-color: #1e40af;">uten</span>
+<span class="token" style="background-color: #86198f;"> AI</span>
+<span class="token" style="background-color: #166534;"> </span>
+<span class="token" style="background-color: #991b1b;">3</span>
+<span class="token" style="background-color: #115e59;">.</span>
+<span class="token" style="background-color: #3f3f46;">0</span>
+<span class="token" style="background-color: #4c1d95;">이</span>
+<span class="token" style="background-color: #5b21b6;"> 담당</span>
+<span class="token" style="background-color: #1e40af;">합니다</span>
+<span class="token" style="background-color: #86198f;">.</span>
+<span class="token" style="background-color: #166534;"><br></span>
+<span class="token" style="background-color: #991b1b;">이는</span>
+<span class="token" style="background-color: #115e59;"> 어디</span>
+<span class="token" style="background-color: #3f3f46;">까지</span>
+<span class="token" style="background-color: #4c1d95;">나</span>
+<span class="token" style="background-color: #5b21b6;"> 의미</span>
+<span class="token" style="background-color: #1e40af;"> 정보</span>
+<span class="token" style="background-color: #86198f;">의</span>
+<span class="token" style="background-color: #166534;"> 압</span>
+<span class="token" style="background-color: #991b1b;">축</span>
+<span class="token" style="background-color: #115e59;">률</span>
+<span class="token" style="background-color: #3f3f46;">과</span>
+<span class="token" style="background-color: #4c1d95;"> 토큰(5)</span>
+<span class="token" style="background-color: #5b21b6;"> 효율</span>
+<span class="token" style="background-color: #1e40af;">을</span>
+<span class="token" style="background-color: #86198f;"> 대</span>
+<span class="token" style="background-color: #166534;">략</span>
+<span class="token" style="background-color: #991b1b;">적으로</span>
+<span class="token" style="background-color: #115e59;"> 가</span>
+<span class="token" style="background-color: #3f3f46;">시</span>
+<span class="token" style="background-color: #4c1d95;">화</span>
+<span class="token" style="background-color: #5b21b6;">하려는</span>
+<span class="token" style="background-color: #1e40af;"> 것이</span>
+<span class="token" style="background-color: #86198f;">므로</span>
+<span class="token" style="background-color: #166534;">,</span>
+<span class="token" style="background-color: #991b1b;"> 엄</span>
+<span class="token" style="background-color: #115e59;">밀</span>
+<span class="token" style="background-color: #3f3f46;">함을</span>
+<span class="token" style="background-color: #4c1d95;"> 요구</span>
+<span class="token" style="background-color: #5b21b6;">하지</span>
+<span class="token" style="background-color: #1e40af;"> 말</span>
+<span class="token" style="background-color: #86198f;">아</span>
+<span class="token" style="background-color: #166534;"> 주세요</span>
+<span class="token" style="background-color: #991b1b;">.</span>
+<span class="token" style="background-color: #115e59;"><br></span>
+<span class="token" style="background-color: #3f3f46;">이</span>
+<span class="token" style="background-color: #4c1d95;">것</span>
+<span class="token" style="background-color: #5b21b6;">으로</span>
+<span class="token" style="background-color: #1e40af;"> 테스트</span>
+<span class="token" style="background-color: #86198f;">용</span>
+<span class="token" style="background-color: #166534;"> 문</span>
+<span class="token" style="background-color: #991b1b;">장을</span>
+<span class="token" style="background-color: #115e59;"> 마</span>
+<span class="token" style="background-color: #3f3f46;">칩</span>
+<span class="token" style="background-color: #4c1d95;">니다</span>
+<span class="token" style="background-color: #5b21b6;">.</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

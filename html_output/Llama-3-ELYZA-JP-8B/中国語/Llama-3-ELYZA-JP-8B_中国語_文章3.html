@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Llama-3-ELYZA-JP-8B - 中国語 - 文章3</title>
+    <style>
+        :root {
+            --bg: #111111;
+            --panel: #1a1a1a;
+            --text: #eeeeee;
+            --muted: #b5b5b5;
+            --accent: #0ea5e9;
+            --border: #2a2a2a;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 1.5rem;
+        }
+        .breadcrumb {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+        .panel {
+            background-color: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        .panel h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+            color: var(--muted);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-box {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .text-area {
+            background-color: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            color: var(--muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            font-family: inherit;
+        }
+        .token-container {
+            line-height: 2.2;
+        }
+        .token {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 6px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="capture-area">
+        <div class="header">
+            <div class="breadcrumb">Tokenizer Dashboard</div>
+            <h2>Llama-3-ELYZA-JP-8B &gt; 中国語 &gt; 文章3</h2>
+        </div>
+        <div class="panel">
+            <h3> 統計情報</h3>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-value">118</div>
+                    <div class="stat-label">文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">101</div>
+                    <div class="stat-label">トークン数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">1.168</div>
+                    <div class="stat-label">トークンあたり文字数</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">85.59%</div>
+                    <div class="stat-label">トークン消費</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <h3> 原文</h3>
+            <div class="text-area">现在开始就我国在东京湾发现的巨大不明生物（通称“哥斯拉”）的处置问题召开内阁会议。
+接下来，请讨论针对哥斯拉应采取何种应对方式。
+备选项为静观、清除、捕获，请从中作出选择。
+无论作何选择，防卫省都将充分协商，并确保能够执行各项作战行动。</div>
+        </div>
+        <div class="panel">
+            <h3> トークン分割結果</h3>
+            <div class="token-container">
+                <span class="token" style="background-color: #1e40af;">现在(2)</span>
+<span class="token" style="background-color: #86198f;">开始</span>
+<span class="token" style="background-color: #166534;">就</span>
+<span class="token" style="background-color: #991b1b;">我</span>
+<span class="token" style="background-color: #115e59;">国</span>
+<span class="token" style="background-color: #3f3f46;">在</span>
+<span class="token" style="background-color: #4c1d95;">东</span>
+<span class="token" style="background-color: #5b21b6;">京</span>
+<span class="token" style="background-color: #1e40af;">湾</span>
+<span class="token" style="background-color: #86198f;">发现</span>
+<span class="token" style="background-color: #166534;">的</span>
+<span class="token" style="background-color: #991b1b;">巨</span>
+<span class="token" style="background-color: #115e59;">大</span>
+<span class="token" style="background-color: #3f3f46;">不</span>
+<span class="token" style="background-color: #4c1d95;">明</span>
+<span class="token" style="background-color: #5b21b6;">生物</span>
+<span class="token" style="background-color: #1e40af;">（</span>
+<span class="token" style="background-color: #86198f;">通</span>
+<span class="token" style="background-color: #166534;">称</span>
+<span class="token" style="background-color: #991b1b;">“</span>
+<span class="token" style="background-color: #115e59;">哥</span>
+<span class="token" style="background-color: #3f3f46;">斯</span>
+<span class="token" style="background-color: #4c1d95;">拉</span>
+<span class="token" style="background-color: #5b21b6;">”</span>
+<span class="token" style="background-color: #1e40af;">）</span>
+<span class="token" style="background-color: #86198f;">的</span>
+<span class="token" style="background-color: #166534;">处</span>
+<span class="token" style="background-color: #991b1b;">置</span>
+<span class="token" style="background-color: #115e59;">问题</span>
+<span class="token" style="background-color: #3f3f46;">召</span>
+<span class="token" style="background-color: #4c1d95;">开</span>
+<span class="token" style="background-color: #5b21b6;">内</span>
+<span class="token" style="background-color: #1e40af;">阁(2)</span>
+<span class="token" style="background-color: #86198f;">会议</span>
+<span class="token" style="background-color: #166534;">。<br></span>
+<span class="token" style="background-color: #991b1b;">接</span>
+<span class="token" style="background-color: #115e59;">下来</span>
+<span class="token" style="background-color: #3f3f46;">，请</span>
+<span class="token" style="background-color: #4c1d95;">讨</span>
+<span class="token" style="background-color: #5b21b6;">论</span>
+<span class="token" style="background-color: #1e40af;">针</span>
+<span class="token" style="background-color: #86198f;">对</span>
+<span class="token" style="background-color: #166534;">哥</span>
+<span class="token" style="background-color: #991b1b;">斯</span>
+<span class="token" style="background-color: #115e59;">拉</span>
+<span class="token" style="background-color: #3f3f46;">应</span>
+<span class="token" style="background-color: #4c1d95;">采</span>
+<span class="token" style="background-color: #5b21b6;">取</span>
+<span class="token" style="background-color: #1e40af;">何</span>
+<span class="token" style="background-color: #86198f;">种</span>
+<span class="token" style="background-color: #166534;">应</span>
+<span class="token" style="background-color: #991b1b;">对</span>
+<span class="token" style="background-color: #115e59;">方式</span>
+<span class="token" style="background-color: #3f3f46;">。<br></span>
+<span class="token" style="background-color: #4c1d95;">备</span>
+<span class="token" style="background-color: #5b21b6;">选</span>
+<span class="token" style="background-color: #1e40af;">项</span>
+<span class="token" style="background-color: #86198f;">为</span>
+<span class="token" style="background-color: #166534;">静</span>
+<span class="token" style="background-color: #991b1b;">观</span>
+<span class="token" style="background-color: #115e59;">、</span>
+<span class="token" style="background-color: #3f3f46;">清</span>
+<span class="token" style="background-color: #4c1d95;">除</span>
+<span class="token" style="background-color: #5b21b6;">、</span>
+<span class="token" style="background-color: #1e40af;">捕</span>
+<span class="token" style="background-color: #86198f;">获</span>
+<span class="token" style="background-color: #166534;">，请</span>
+<span class="token" style="background-color: #991b1b;">从</span>
+<span class="token" style="background-color: #115e59;">中</span>
+<span class="token" style="background-color: #3f3f46;">作</span>
+<span class="token" style="background-color: #4c1d95;">出</span>
+<span class="token" style="background-color: #5b21b6;">选择</span>
+<span class="token" style="background-color: #1e40af;">。<br></span>
+<span class="token" style="background-color: #86198f;">无</span>
+<span class="token" style="background-color: #166534;">论</span>
+<span class="token" style="background-color: #991b1b;">作</span>
+<span class="token" style="background-color: #115e59;">何</span>
+<span class="token" style="background-color: #3f3f46;">选择</span>
+<span class="token" style="background-color: #4c1d95;">，</span>
+<span class="token" style="background-color: #5b21b6;">防</span>
+<span class="token" style="background-color: #1e40af;">卫</span>
+<span class="token" style="background-color: #86198f;">省</span>
+<span class="token" style="background-color: #166534;">都</span>
+<span class="token" style="background-color: #991b1b;">将</span>
+<span class="token" style="background-color: #115e59;">充</span>
+<span class="token" style="background-color: #3f3f46;">分</span>
+<span class="token" style="background-color: #4c1d95;">协</span>
+<span class="token" style="background-color: #5b21b6;">商</span>
+<span class="token" style="background-color: #1e40af;">，并</span>
+<span class="token" style="background-color: #86198f;">确</span>
+<span class="token" style="background-color: #166534;">保</span>
+<span class="token" style="background-color: #991b1b;">能够</span>
+<span class="token" style="background-color: #115e59;">执行</span>
+<span class="token" style="background-color: #3f3f46;">各</span>
+<span class="token" style="background-color: #4c1d95;">项</span>
+<span class="token" style="background-color: #5b21b6;">作</span>
+<span class="token" style="background-color: #1e40af;">战</span>
+<span class="token" style="background-color: #86198f;">行动</span>
+<span class="token" style="background-color: #166534;">。</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
